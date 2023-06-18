@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Oswald:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.centernav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+}
+
+.leftnav {}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70%;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 120%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+}

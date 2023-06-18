@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Oswald:wght@300&family=Poppins:wght@200&display=swap');
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.centerfooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+.leftfooter {
+    text-align: center;
+    width: 25%;
+}
+
+.leftfooter h5 {
+    font-size: 100%;
+    font-family: 'Oswald', sans-serif;
+}
+
+.leftfooter p {
+    margin-top: 6%;
+    font-family: 'Poppins', sans-serif;
+    color: #A1A1A1;
+}
+
+.leftfooter span {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 5%;
+    color: #A1A1A1;
+}
+
+.rightfooter {
+    width: 19%;
+    text-align: center;
+    margin-top: 4%;
+}
+
+.rightfooter h5 {
+    font-size: 100%;
+    font-family: 'Oswald', sans-serif;
+}
+
+.rightfooter p {
+    margin-top: 6%;
+    font-family: 'Poppins', sans-serif;
+    color: #A1A1A1;
+}
+
+.rightfooter span {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 5%;
+    color: #A1A1A1;
+}
+
+.icons {
+    text-align: center;
+    margin-top: 5%;
+}
+
