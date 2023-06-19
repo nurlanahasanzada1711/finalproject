@@ -21,7 +21,7 @@ const Footer = () => {
                 <span>Phone: + 33 323 34522</span>
                 <span>Fax: +33 3467888</span>
               </div>
-              <div className='footerlogo'>
+              <div className={style.footerlogo}>
                 <img src='' alt='' />
               </div>
               <div className={style.rightfooter}>
@@ -35,11 +35,30 @@ const Footer = () => {
           </div>
         </div>
         <div className={style.icons}>
-          <FacebookOutlinedIcon />
-          <TwitterIcon />
-          <YouTubeIcon/>
-          <EmailIcon/>
-          <LanguageIcon/>
+          <ul>
+           
+              <li>
+                 <FacebookOutlinedIcon />
+              </li>
+             
+              <li>
+                <TwitterIcon />
+              </li>
+              <li>
+                <YouTubeIcon />
+              </li>
+              <li>
+                <EmailIcon />
+              </li>
+              <li>
+                <LanguageIcon />
+              </li>
+
+           
+          </ul>
+
+
+
           <p>Copyright © 2023 Bakery – Design by ArrowHitech – All Rights Reserved</p>
         </div>
       </footer>
