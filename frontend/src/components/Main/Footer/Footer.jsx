@@ -5,6 +5,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import EmailIcon from '@mui/icons-material/Email';
 import LanguageIcon from '@mui/icons-material/Language';
+import logo from '../../../images/Logo-1.png'
 
 const Footer = () => {
   return (
@@ -22,7 +23,7 @@ const Footer = () => {
                 <span>Fax: +33 3467888</span>
               </div>
               <div className={style.footerlogo}>
-                <img src='' alt='' />
+                <img src={logo} alt='' />
               </div>
               <div className={style.rightfooter}>
                 <h5>ABOUT SAY</h5>
