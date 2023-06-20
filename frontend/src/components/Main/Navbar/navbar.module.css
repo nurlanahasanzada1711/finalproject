@@ -7,21 +7,18 @@
 }
 
 header {
-    background-image: url("../../../images//bread.jpg");
+   
     width: 100%;
     height: 100vh;
-    background-position: center center;
-    background-size: cover;
-   
-  
-    overflow: hidden;
+ 
+    position: absolute;
+
 }
 .centernav {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 15%;
-    /* background-color: blue; */
 }
 
 .leftnav {}

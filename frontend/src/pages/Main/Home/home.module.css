@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Oswald:wght@300&family=Poppins:wght@200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero {
+    background-image: url("../../../images//bread.jpg");
+    width: 100%;
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+}
+
+.home {
+    text-align: center;
+    line-height: 1;
+    padding-top: 18%;
+}
+
+.home h5 {
+    font-size: 250%;
+    color: #F4ECDA;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 800;
+    line-height: 40px;
+    letter-spacing: 2px;  
+}
+
+.home h1 {
+    font-size: 450%;
+    color: #FFF;
+    font-weight: bolder;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 1%;
+    line-height: 60px;
+    letter-spacing: 5px; 
+   
+}
+
+.home h6 {
+    font-size: 230%;
+    margin-top: 1%;
+    color: #FFF;
+    font-family: 'Italianno', cursive;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 100%;
+    letter-spacing: 30%;    
+}
+
+.sect2 {
+    text-align: center;
+}
+
+.sect2 img {
+    width: 13%;
+  
+}
+
+.sect2 h2{
+    font-size: 210%;
+    color: #7E5A4E;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    line-height: 30px;
+    letter-spacing: 2px; 
+}
+
+.sect2 h6 {
+    font-size: 210%;
+    margin-top: 1%;
+    color:  #000000;;
+    font-family: 'Italianno', cursive;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 100%;
+    letter-spacing: 30%; 
+}
