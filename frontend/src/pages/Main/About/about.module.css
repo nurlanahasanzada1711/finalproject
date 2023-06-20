@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.about {
+    background-image: url("../../../images/img-banner.jpg");
+    width: 100%;
+    height: 80vh;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.aboutwrite {
+    padding-top: 13%;
+    padding-left: 13%;
+    color: white;
+}
+
+.about h1 {
+    font-size: 800%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+
+}
+
+.about span {
+    font-size: 110%;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 5px;
+}
+
+.about p {
+    font-weight: 400;
+    font-style: italic;
+    font-family: 'Poppins', sans-serif;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    padding-top: 3%;
+}
+
+.accardions {
+    background-image: url("../../../images//homemade.jpg");
+    width: 100%;
+    height: 85vh;
+    margin-top: 10%;
+}
+
+.working {
+    padding-top: 8%;
+    text-align: center;
+}
+
+.working h2 {
+    font-weight: 600;
+    font-family: 'Oswald', sans-serif;
+    color: #7E5A4E;
+    font-size: 200%;
+    line-height: 50px;
+    letter-spacing: 2px;
+}
+
+.working h3 {
+    font-size: 200%;
+    margin-top: 1%;
+    color: black;
+    font-family: 'Italianno', cursive;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 20px;
+    letter-spacing: 2px;
+}
+
+.accardion {
+    width: 30%;
+    margin-left: 50%;
+    padding-top: 1%;
+}
+
+.accardion h3 {
+    line-height: 60px;
+    letter-spacing: 2px;
+    font-size: 150%;
+    font-weight: 600;
+    font-family: 'Oswald', sans-serif;
+
+}
