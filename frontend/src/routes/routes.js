@@ -31,6 +31,7 @@ export const ROUTES = [
                 path:'/contact',
                 element: <Contact/>
             },
+            
             {
                 path:'*',
                 element: <NotFound/>
