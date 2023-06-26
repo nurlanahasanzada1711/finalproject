@@ -4,6 +4,9 @@ import icon from '../../../images/icon.png'
 import icon5 from '../../../images/icon-5.png'
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button';
+import chocolate from '../../../images/chocolate.jpg'
+import fruit from '../../../images/fruit.jpg'
+import bakery from '../../../images/bakery.jpg'
 const Home = () => {
   return (
     <>
@@ -85,6 +88,14 @@ const Home = () => {
                   />
                   <Button type="submit" variant="contained" style={{ marginTop: "20px", backgroundColor:" #7E5A4E" }}>MAKE RESERVATION</Button>
                 </form>
+              </div>
+              <div className={style.contactus}>
+                <h2>CONTACT US</h2>
+                <p>PO Box 16122 Collins Victoria 3000 Australia</p>
+                <h6>GALLERY</h6>
+                <img src={chocolate} alt=''/>
+                <img src={fruit} alt=''/>
+                <img src={bakery} alt=''/>
               </div>
             </div>
           </div>

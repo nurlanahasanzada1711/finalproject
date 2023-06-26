@@ -160,3 +160,18 @@
     line-height: 100%;
     letter-spacing: 30%; 
 }
+
+.contactus img {
+    width: 10%;
+    margin-right: 2%;
+    border-radius: 100%;
+  
+}
+
+.contactus img+img {
+    width: 10.7%;
+}
+
+.contactus img+img+img {
+    width: 7.7%;
+}
