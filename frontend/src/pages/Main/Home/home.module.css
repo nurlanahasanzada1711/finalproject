@@ -26,7 +26,7 @@
     font-family: 'Oswald', sans-serif;
     font-weight: 800;
     line-height: 40px;
-    letter-spacing: 2px;  
+    letter-spacing: 2px;
 }
 
 .home h1 {
@@ -36,8 +36,8 @@
     font-family: 'Oswald', sans-serif;
     margin-top: 1%;
     line-height: 60px;
-    letter-spacing: 5px; 
-   
+    letter-spacing: 5px;
+
 }
 
 .home h6 {
@@ -48,7 +48,7 @@
     font-weight: 500;
     text-transform: capitalize;
     line-height: 100%;
-    letter-spacing: 30%;    
+    letter-spacing: 30%;
 }
 
 .sect2 {
@@ -57,27 +57,28 @@
 
 .sect2 img {
     width: 13%;
-  
+
 }
 
-.sect2 h2{
+.sect2 h2 {
     font-size: 210%;
     color: #7E5A4E;
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
     line-height: 30px;
-    letter-spacing: 2px; 
+    letter-spacing: 2px;
 }
 
 .sect2 h6 {
     font-size: 210%;
     margin-top: 1%;
-    color:  #000000;;
+    color: #000000;
+    ;
     font-family: 'Italianno', cursive;
     font-weight: 500;
     text-transform: capitalize;
     line-height: 100%;
-    letter-spacing: 30%; 
+    letter-spacing: 30%;
 }
 
 .testimonals {
@@ -85,24 +86,25 @@
     margin-top: 10%;
 }
 
-.testimonals h2{
+.testimonals h2 {
     font-size: 210%;
     color: #7E5A4E;
     font-family: 'Oswald', sans-serif;
     font-weight: 900;
     line-height: 30px;
-    letter-spacing: 2px; 
+    letter-spacing: 2px;
 }
 
 .testimonals h6 {
     font-size: 210%;
     margin-top: 1%;
-    color:  #000000;;
+    color: #000000;
+    ;
     font-family: 'Italianno', cursive;
     font-weight: 500;
     text-transform: capitalize;
     line-height: 100%;
-    letter-spacing: 30%; 
+    letter-spacing: 30%;
 }
 
 .care {
@@ -114,25 +116,26 @@
     width: 12%;
 }
 
-.care h2{
+.care h2 {
     font-size: 210%;
     color: #7E5A4E;
     font-family: 'Oswald', sans-serif;
     font-weight: 900;
     line-height: 30px;
-    letter-spacing: 2px; 
+    letter-spacing: 2px;
 }
 
 
 .care h6 {
     font-size: 210%;
     margin-top: 1%;
-    color:  #000000;;
+    color: #000000;
+    ;
     font-family: 'Italianno', cursive;
     font-weight: 500;
     text-transform: capitalize;
     line-height: 100%;
-    letter-spacing: 30%; 
+    letter-spacing: 30%;
 }
 
 
@@ -141,37 +144,101 @@
     margin-top: 10%;
 }
 
-.news h2{
+.news h2 {
     font-size: 210%;
     color: #7E5A4E;
     font-family: 'Oswald', sans-serif;
     font-weight: 900;
     line-height: 30px;
-    letter-spacing: 2px; 
+    letter-spacing: 2px;
 }
 
 .news h6 {
     font-size: 210%;
     margin-top: 1%;
-    color:  #000000;;
+    color: #000000;
+    ;
     font-family: 'Italianno', cursive;
     font-weight: 500;
     text-transform: capitalize;
     line-height: 100%;
-    letter-spacing: 30%; 
+    letter-spacing: 30%;
+}
+
+
+
+.book h2 {
+    font-size: 210%;
+    color: black;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 1000;
+    line-height: 30px;
+    letter-spacing: 2px;
+}
+
+.book h6 {
+    font-size: 190%;
+    color: #000000;
+    margin-top: 5%;
+    font-family: 'Italianno', cursive;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 100%;
+    letter-spacing: 30%;
+}
+
+.images {
+    margin-top: 5%;
+    width: 130%;
+    height: 30vh;
 }
 
 .contactus img {
-    width: 10%;
-    margin-right: 2%;
+    width: 20%;
+    margin-right: 4%;
     border-radius: 100%;
-  
+    height: 11vh;
 }
 
 .contactus img+img {
-    width: 10.7%;
+    width: 20%;
+    height: 11vh;
+
 }
 
 .contactus img+img+img {
-    width: 7.7%;
+    width: 20%;
+    height: 11vh;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+    margin-left: 5%;
+}
+
+.contactus h2 {
+    font-size: 210%;
+    color: black;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 1000;
+    line-height: 30px;
+    letter-spacing: 2px;
+}
+
+.contactus p {
+    margin-top: 5%;
+    font-weight: 900;
+    font-size: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contactus h6 {
+    margin-top: 10%;
+    font-size: 110%;
+    font-family: 'Oswald', sans-serif;
+    line-height: 30px;
+    letter-spacing: 2px;
 }

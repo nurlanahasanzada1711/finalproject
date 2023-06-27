@@ -7,6 +7,9 @@ import Button from '@mui/material/Button';
 import chocolate from '../../../images/chocolate.jpg'
 import fruit from '../../../images/fruit.jpg'
 import bakery from '../../../images/bakery.jpg'
+// import React,{useState} from 'react'
+// import ReactDOM from 'react-dom'
+// import ModalVideo from 'react-modal-video'
 const Home = () => {
   return (
     <>
@@ -38,8 +41,8 @@ const Home = () => {
         </section>
         <section>
           <div className='container'>
-            <div className='row'>
-              <div className='book'>
+            <div className={style.row}>
+              <div className={style.book}>
                 <h2>BOOK A TABLE</h2>
                 <h6>Submit Information To Place Order</h6>
                 <form>
@@ -86,16 +89,19 @@ const Home = () => {
                     variant='standard'
 
                   />
-                  <Button type="submit" variant="contained" style={{ marginTop: "20px", backgroundColor:" #7E5A4E" }}>MAKE RESERVATION</Button>
+                  <Button type="submit" variant="contained" style={{ marginTop: "20px", backgroundColor: " #7E5A4E" }}>MAKE RESERVATION</Button>
                 </form>
               </div>
               <div className={style.contactus}>
                 <h2>CONTACT US</h2>
                 <p>PO Box 16122 Collins Victoria 3000 Australia</p>
                 <h6>GALLERY</h6>
-                <img src={chocolate} alt=''/>
-                <img src={fruit} alt=''/>
-                <img src={bakery} alt=''/>
+                <div className={style.images}>
+                  <img src={chocolate} alt='' />
+                  <img src={fruit} alt='' />
+                  <img src={bakery} alt='' />
+                </div>
+
               </div>
             </div>
           </div>
