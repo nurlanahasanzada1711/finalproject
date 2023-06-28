@@ -7,10 +7,15 @@ import Button from '@mui/material/Button';
 import chocolate from '../../../images/chocolate.jpg'
 import fruit from '../../../images/fruit.jpg'
 import bakery from '../../../images/bakery.jpg'
-// import React,{useState} from 'react'
-// import ReactDOM from 'react-dom'
-// import ModalVideo from 'react-modal-video'
+import { useState } from 'react'
+import ReactDOM from 'react-dom'
+import ModalVideo from 'react-modal-video'
+
+
 const Home = () => {
+  const [isOpen, setOpen] = useState(false)
+
+
   return (
     <>
       <main>
@@ -89,7 +94,7 @@ const Home = () => {
                     variant='standard'
 
                   />
-                  <Button type="submit" variant="contained" style={{ marginTop: "20px", backgroundColor: " #7E5A4E" }}>MAKE RESERVATION</Button>
+                  <Button type="submit" variant="contained" style={{ marginTop: "20px", backgroundColor: " #7E5A4E", padding: "10px" }}>MAKE RESERVATION</Button>
                 </form>
               </div>
               <div className={style.contactus}>
@@ -101,7 +106,21 @@ const Home = () => {
                   <img src={fruit} alt='' />
                   <img src={bakery} alt='' />
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="ad5_MXzibSM" onClose={() => setOpen(false)} />
 
+          <button className="btn-primary" onClick={() => setOpen(true)}>VIEW DEMO</button>
+        </section>
+        <section className='numbers'>
+          <div className='container'>
+            <div className='row'>
+              <div className='pastry'>
+                <h1></h1>
+                <p></p>
               </div>
             </div>
           </div>
