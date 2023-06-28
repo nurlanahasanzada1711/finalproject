@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import style from '../Home/home.module.css'
 import icon from '../../../images/icon.png'
 import icon5 from '../../../images/icon-5.png'
@@ -10,10 +10,31 @@ import bakery from '../../../images/bakery.jpg'
 import { useState } from 'react'
 import ReactDOM from 'react-dom'
 import ModalVideo from 'react-modal-video'
+import { getAllNumbers } from '../../../api/numbersrequests'
 
 
 const Home = () => {
   const [isOpen, setOpen] = useState(false)
+  const [numbers, setNumbers] = useState([]);
+
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef(null);
+
+  const togglePlay = () => {
+    if (isPlaying) {
+      videoRef.current.pause();
+    } else {
+      videoRef.current.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
+  useEffect(() => {
+    getAllNumbers().then((res) => {
+      setNumbers(res.data);
+      console.log(res.data);
+    });
+  }, []);
 
 
   return (
@@ -111,17 +132,34 @@ const Home = () => {
           </div>
         </section>
         <section>
-          <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="ad5_MXzibSM" onClose={() => setOpen(false)} />
+          <div className={style.videomodal}>
+            <video
+              ref={videoRef}
+              // width="80%"
+              // height="80%"
+              poster="https://bake.arrowtheme.com/wp-content/uploads/elementor/thumbs/bg-video-ovat3a9oe3xtudhpm5vi8u4ysxfcqlkxihlrmlj40w.png"
+              controls
+            >
+              <source src="https://www.youtube.com/watch?v=ad5_MXzibSM" type="video/mp4" />
+              <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="L61p2uyiMSo" onClose={() => setOpen(false)} />
 
-          <button className="btn-primary" onClick={() => setOpen(true)}>VIEW DEMO</button>
+              <button className="btn-primary" onClick={() => setOpen(true)}>VIEW DEMO</button>
+            </video>
+          </div>
         </section>
         <section className='numbers'>
           <div className='container'>
-            <div className='row'>
-              <div className='pastry'>
-                <h1></h1>
-                <p></p>
-              </div>
+            <div className={style.numbers}>
+              {numbers &&
+                numbers.map((number) => {
+                  return (
+                    <div key={number._id} className={style.pastry}>
+                      <h1>{number.count}</h1>
+                      <p>{number.desc}</p>
+                    </div>
+                  )
+                }
+                )}
             </div>
           </div>
         </section>

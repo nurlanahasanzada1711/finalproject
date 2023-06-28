@@ -3,7 +3,6 @@ const app = express();
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const dotenv = require('dotenv');
-const navbarLogo_router = require('./routes/navbarLogo.routes');
 const numbers_router = require('./routes/numbers.routes');
 const mongoose = require('mongoose');
 
@@ -20,8 +19,7 @@ mongoose.connect(DB_CONNECTION.replace("<password>",DB_PASSWORD))
 .then(()=> console.log("Mongo DB Connected!"))
 
 
-//NAVBARLOGO
-app.use('/api/navbarLogos/', navbarLogo_router)
+
 
 // NUMBERS
 app.use('/api/numbers/', numbers_router)

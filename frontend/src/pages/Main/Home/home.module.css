@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Oswald:wght@300&family=Poppins:wght@200&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -240,4 +241,32 @@
     font-family: 'Oswald', sans-serif;
     line-height: 30px;
     letter-spacing: 2px;
+}
+
+.numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    text-align: center;
+}
+
+.pastry h1 {
+    font-size: 350%;
+    color: #7E5A4E;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 1000;
+}
+
+.pastry p {
+    font-size: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.videomodal {
+    width: 80%;
+    margin: 0 auto;
+    height: 100vh;
+    margin-top: 5%;
 }

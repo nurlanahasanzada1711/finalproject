@@ -1,14 +1,14 @@
 const express = require('express');
 const numbers_router = express.Router()
-const numbersController = require('../controllers/NavbarLogo.controller');
+const numbersController = require('../controllers/numbers.controller');
 
-//get All NavbarLogo
-numbers_router.get('/',numbersController.getAll)
+//get All Artists
+numbers_router.get('/',numbersController.getAllNumbers)
 
+//post Artist
+numbers_router.post('/',numbersController.postNumbers)
 
-//post NavbarLogo
-numbers_router.post('/',numbersController.post)
-
+numbers_router.delete('/:id', numbersController.deleteNumbers);
 
 
 
