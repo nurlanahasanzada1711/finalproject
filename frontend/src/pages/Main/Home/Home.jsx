@@ -52,6 +52,23 @@ const Home = () => {
           <h2>FRESH SERVICES</h2>
           <h6>The Best Of Our Services</h6>
         </section>
+
+        <section className='history'>
+          <div className='container'>
+            <div className='abouthistory'>
+              <div className='lefthistory'>
+                <h2>ABOUT HISTORY</h2>
+                <h6> Discovery Story Since 1978</h6>
+                <p></p>
+                <p></p>
+                <p>JONT NICOLIN – CEO</p>
+              </div>
+              <div className='imagehistory'>
+                <img src='' alt =''/>
+              </div>
+            </div>
+          </div>
+        </section>
         <section className={style.testimonals}>
           <h2>TESTIMONALS</h2>
           <h6>What Clients Say About Us</h6>
