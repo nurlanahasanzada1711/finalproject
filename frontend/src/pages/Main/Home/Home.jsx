@@ -11,11 +11,15 @@ import { useState } from 'react'
 import ReactDOM from 'react-dom'
 import ModalVideo from 'react-modal-video'
 import { getAllNumbers } from '../../../api/numbersrequests'
+import { getAllHistories } from '../../../api/historyrequests'
+import { getAllServices } from '../../../api/servicesrequests'
 
 
 const Home = () => {
   const [isOpen, setOpen] = useState(false)
   const [numbers, setNumbers] = useState([]);
+  const [histories, setHistories] = useState([]);
+  const [services, setServices] = useState([]);
 
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
@@ -36,6 +40,20 @@ const Home = () => {
     });
   }, []);
 
+  useEffect(() => {
+    getAllHistories().then((res) => {
+      setHistories(res.data);
+      console.log(res.data);
+    });
+  }, []);
+
+  useEffect(() => {
+    getAllServices().then((res) => {
+      setServices(res.data);
+      console.log(res.data);
+    });
+  }, []);
+
 
   return (
     <>
@@ -52,20 +70,52 @@ const Home = () => {
           <h2>FRESH SERVICES</h2>
           <h6>The Best Of Our Services</h6>
         </section>
+        <section>
+          <div className='container'>
+            <div className={style.freshservices}>
+              {services &&
+                services.map((service) => {
+                  return (
+                    <div className={style.cakecrud}>
+                      <img src={service.imageURL} alt='' />
+                      <h2>{service.desc}</h2>
+                      <p>{service.about}</p>
+                    </div>
+                  )
+                }
+                )}
+
+            </div>
+          </div>
+        </section>
 
         <section className='history'>
           <div className='container'>
-            <div className='abouthistory'>
-              <div className='lefthistory'>
-                <h2>ABOUT HISTORY</h2>
-                <h6> Discovery Story Since 1978</h6>
-                <p></p>
-                <p></p>
-                <p>JONT NICOLIN – CEO</p>
-              </div>
-              <div className='imagehistory'>
-                <img src='' alt =''/>
-              </div>
+            <div className={style.abouthistory}>
+              {histories &&
+                histories.map((history) => {
+                  return (
+                    <div className={style.lefthistory}>
+                      <h2>ABOUT HISTORY</h2>
+                      <h6> Discovery Story Since 1978</h6>
+                      <p>{history.desc}</p>
+                      <p>{history.about}</p>
+                      <p>JONT NICOLIN – CEO</p>
+                    </div>
+
+                  )
+                }
+                )}
+              {histories &&
+                histories.map((history) => {
+                  return (
+                    <div className={style.imagehistory}>
+                      <img src={history.imageURL} alt='' />
+                    </div>
+                  )
+                }
+                )}
+
             </div>
           </div>
         </section>

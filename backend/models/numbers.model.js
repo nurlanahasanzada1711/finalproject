@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-//Artist Model
+//Numbers Model
 const numbersModel = mongoose.model("Numbers", new mongoose.Schema({
     count: Number,
     desc: String,
