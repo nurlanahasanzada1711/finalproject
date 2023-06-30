@@ -6,6 +6,7 @@ const dotenv = require('dotenv');
 const numbers_router = require('./routes/numbers.routes');
 const histories_router = require('./routes/history.routes');
 const services_router = require('./routes/services.routes');
+const times_router = require('./routes/times.routes');
 const mongoose = require('mongoose');
 
 dotenv.config();
@@ -31,6 +32,10 @@ app.use('/api/histories/', histories_router)
 
 // SERVICES
 app.use('/api/services/', services_router)
+
+// TIMES
+app.use('/api/times/', times_router)
+
 
 
 

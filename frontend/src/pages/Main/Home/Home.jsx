@@ -13,6 +13,7 @@ import ModalVideo from 'react-modal-video'
 import { getAllNumbers } from '../../../api/numbersrequests'
 import { getAllHistories } from '../../../api/historyrequests'
 import { getAllServices } from '../../../api/servicesrequests'
+import { getAllTimes } from '../../../api/timesrequests'
 
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
   const [numbers, setNumbers] = useState([]);
   const [histories, setHistories] = useState([]);
   const [services, setServices] = useState([]);
+  const [times, setTimes] = useState([]);
 
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
@@ -50,6 +52,13 @@ const Home = () => {
   useEffect(() => {
     getAllServices().then((res) => {
       setServices(res.data);
+      console.log(res.data);
+    });
+  }, []);
+
+  useEffect(() => {
+    getAllTimes().then((res) => {
+      setTimes(res.data);
       console.log(res.data);
     });
   }, []);
@@ -115,7 +124,6 @@ const Home = () => {
                   )
                 }
                 )}
-
             </div>
           </div>
         </section>
@@ -127,6 +135,23 @@ const Home = () => {
           <img src={icon5} alt='' />
           <h2>BAKERY CARE</h2>
           <h6>A Few Of Our Favourite Things</h6>
+        </section>
+
+        <section className={style.times}>
+          {times &&
+            times.map((time) => {
+              return (
+                <div className={style.opentimes}>
+                  <img src={time.imageURL} alt='' />
+                  <h2>OPEN TIMES</h2>
+                  <p>HOTLINE:<b>{time.phone}</b></p>
+                  <p>HOURS: {time.hours}</p>
+                  <button>HOW TO <br></br>FIND US</button>
+                </div>
+              )
+            }
+            )}
+       
         </section>
         <section className={style.news}>
           <h2>NEWS & BLOG</h2>

@@ -84,7 +84,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5%;
+    gap: 7%;
     margin-top: 5%;
     margin-bottom: 20%;
 }
@@ -96,10 +96,11 @@
 }
 
 .cakecrud img {
-    width: 80%;
-    height: 30vh;
+    width: 90%;
+    height: 35vh;
     border-radius: 100%;
-    border: 5px solid  #7E5A4E; ;
+    border: 5px solid #7E5A4E;
+    ;
 }
 
 .cakecrud h2 {
@@ -118,6 +119,7 @@
     font-size: 90%;
     font-weight: 700;
 }
+
 .abouthistory {
     display: flex;
     justify-content: center;
@@ -244,6 +246,69 @@
     letter-spacing: 30%;
 }
 
+.times {
+    background-image: url('../../../images/bakery-products.jpg');
+    width: 100%;
+    height: 110vh;
+    background-position: center center;
+    background-size: cover;
+    margin-top: 5%;
+}
+
+.opentimes {
+    text-align: center;
+    padding-top: 8%;
+    background-color: rgba(0, 0, 0, 0.532);
+    width: 100%;
+    height: 110vh;
+}
+
+.opentimes img {
+    width: 11%;
+}
+
+.opentimes b {
+    color: white;
+    font-size: 200%;
+    margin-left: 1%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+}
+.opentimes h2 {
+    font-size: 800%;
+    color: #F4ECDA;
+    font-family: 'Oswald', sans-serif;
+    line-height: 180px;
+    letter-spacing: 5px;
+    font-weight: 800;
+}
+
+.opentimes p {
+    color: #A1A1A1;
+    font-family: 'Oswald', sans-serif;
+    padding-top: 1%;
+    line-height: 20px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.opentimes button {
+    font-size:90%;
+    width: 6.8%;
+    height: 13.4vh;
+    border-radius: 50%;
+    padding: 0.5% 0.5%;
+    margin-top: 2%;
+    font-family: 'Oswald', sans-serif;
+    color:  #FFF;
+    background-color:  #7E5A4E;
+}
+
+.opentimes button:hover {
+    background-color: white;
+    color: #7E5A4E;
+    transition: all .3s;
+}
 
 .news {
     text-align: center;
