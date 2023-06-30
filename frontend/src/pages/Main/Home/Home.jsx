@@ -14,6 +14,7 @@ import { getAllNumbers } from '../../../api/numbersrequests'
 import { getAllHistories } from '../../../api/historyrequests'
 import { getAllServices } from '../../../api/servicesrequests'
 import { getAllTimes } from '../../../api/timesrequests'
+import { getAllBlogs } from '../../../api/blogsrequests'
 
 
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
   const [histories, setHistories] = useState([]);
   const [services, setServices] = useState([]);
   const [times, setTimes] = useState([]);
+  const [blogs, setBlogs] = useState([]);
 
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
@@ -59,6 +61,13 @@ const Home = () => {
   useEffect(() => {
     getAllTimes().then((res) => {
       setTimes(res.data);
+      console.log(res.data);
+    });
+  }, []);
+
+  useEffect(() => {
+    getAllBlogs().then((res) => {
+      setBlogs(res.data);
       console.log(res.data);
     });
   }, []);
@@ -151,11 +160,44 @@ const Home = () => {
               )
             }
             )}
-       
+
         </section>
         <section className={style.news}>
           <h2>NEWS & BLOG</h2>
           <h6>A Love Story From The Blog</h6>
+          <div className='container'>
+            <div className='newsblog'>
+              <div className='blogs'>
+                <div className='blog'>
+                  <div className={style.imagewrite}>
+                    {blogs &&
+                      blogs.map((blog) => {
+                        return (
+                          <div className='image'>
+                            <img src={blog.imageURL} alt='' />
+                          </div>
+                        )
+                      }
+                      )}
+                    {blogs &&
+                      blogs.map((blog) => {
+                        return (
+                          <div className='write'>
+                            <h3>{blog.desc}</h3>
+                            <h4>{blog.admin}</h4>
+                            <p>{blog.about}</p>
+                            <h5>READ MORE</h5>
+                          </div>
+                        )
+                      }
+                      )}
+
+                  </div>
+                </div>
+              </div>
+              <div className='newswrite'></div>
+            </div>
+          </div>
         </section>
         <section>
           <div className='container'>
