@@ -166,36 +166,39 @@ const Home = () => {
           <h2>NEWS & BLOG</h2>
           <h6>A Love Story From The Blog</h6>
           <div className='container'>
-            <div className='newsblog'>
-              <div className='blogs'>
-                <div className='blog'>
-                  <div className={style.imagewrite}>
-                    {blogs &&
-                      blogs.map((blog) => {
-                        return (
-                          <div className='image'>
+            <div className={style.newsblog}>
+              <div className={style.blogs}>
+                <div className={style.blog}>
+                  {blogs &&
+                    blogs.map((blog) => {
+                      return (
+                        <div className={style.imagewrite}>
+
+                          <div className={style.image}>
                             <img src={blog.imageURL} alt='' />
                           </div>
-                        )
-                      }
-                      )}
-                    {blogs &&
-                      blogs.map((blog) => {
-                        return (
-                          <div className='write'>
+                          <div className={style.write}>
                             <h3>{blog.desc}</h3>
                             <h4>{blog.admin}</h4>
                             <p>{blog.about}</p>
                             <h5>READ MORE</h5>
                           </div>
-                        )
-                      }
-                      )}
 
-                  </div>
+                        </div>
+                      )
+                    }
+                    )}
                 </div>
               </div>
-              <div className='newswrite'></div>
+              <div className={style.newswrite}>
+                <p> Aliquam faucibus nec, tempor semper tortor.
+                  Duis eget orci risus. Pellentesque nec dui sed
+                  facilisis condimentum justo nec, tempor semper
+                  tortor. Duis eget orci risus. Pellentesque nec
+                  dui sed nulla tempor semper tortor. Duis eget
+                  orci risus. Pellentesque nec dui sed facilisis
+                </p>
+              </div>
             </div>
           </div>
         </section>

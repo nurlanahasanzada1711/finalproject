@@ -274,6 +274,7 @@
     font-family: 'Oswald', sans-serif;
     font-weight: 900;
 }
+
 .opentimes h2 {
     font-size: 800%;
     color: #F4ECDA;
@@ -293,7 +294,7 @@
 }
 
 .opentimes button {
-    font-size:90%;
+    font-size: 90%;
     width: 6.8%;
     height: 13.4vh;
     border: none;
@@ -301,8 +302,8 @@
     padding: 0.5% 0.5%;
     margin-top: 2%;
     font-family: 'Oswald', sans-serif;
-    color:  #FFF;
-    background-color:  #7E5A4E;
+    color: #FFF;
+    background-color: #7E5A4E;
 }
 
 .opentimes button:hover {
@@ -337,16 +338,85 @@
     letter-spacing: 30%;
 }
 
+
 .imagewrite {
     display: flex;
+    width: 70%;
+    gap: 10%;
+    margin-left: 20%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+
+.newsblog {
+    display: flex;
+}
+
+.image {
+    width: 20%;
+}
+
+.image img {
+    width: 160%;
+    height: 20vh;
+}
+
+.write {
+    text-align: left;
+}
+
+.write h3 {
+    font-size: 100%;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    line-height: 50px;
+}
+
+.write h4 {
+    font-size: 70%;
+    color: #adadad;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+}
+
+.write p {
+    font-size: 90%;
+    color: #777;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    margin-top: 2%;
+}
+
+.write h5 {
+    font-size: 80%;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 3px;
+    font-weight: 400;
+    color: #7E5A4E;
+    line-height: 30px;
+
+}
+
+.newswrite {
+    width: 35%;
+    color: #555555;
+    margin-top: 10%;
+    margin-right: 15%;
+    font-size: 90%;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 800;
+    text-align: left;
+    line-height: 25px;
 }
 
 .book h2 {
     font-size: 210%;
-    color: black;
     font-family: 'Oswald', sans-serif;
     font-weight: 1000;
-    line-height: 30px;
+
     letter-spacing: 2px;
 }
 
@@ -391,6 +461,7 @@
     align-items: center;
     gap: 20%;
     margin-left: 5%;
+    margin-top: 5%;
 }
 
 .contactus h2 {
