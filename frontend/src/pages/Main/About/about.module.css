@@ -18,6 +18,9 @@
     padding-top: 13%;
     padding-left: 13%;
     color: white;
+    background-color: rgba(0, 0, 0, 0.63);
+    width: 100%;
+    height: 80vh;
 }
 
 .about h1 {

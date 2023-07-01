@@ -18,6 +18,9 @@
 .contactwrite {
     padding-top: 13%;
     padding-left: 12%;
+    background-color: rgba(0, 0, 0, 0.584);
+    width: 100%;
+    height: 80vh;
 }
 
 .contactwrite h1 {

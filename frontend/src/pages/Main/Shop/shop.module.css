@@ -18,6 +18,9 @@
 .shopwrite {
     padding-top: 18%;
     padding-left: 12%;
+    background-color: rgba(0, 0, 0, 0.54);
+    width: 100%;
+    height: 65vh;
 }
 
 .shopwrite h1 {
