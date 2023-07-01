@@ -11,7 +11,7 @@
     background-position: bottom right;
     background-repeat: no-repeat;
     background-size: cover;
-    
+
 }
 
 .aboutwrite {
@@ -43,6 +43,65 @@
     line-height: 20px;
     letter-spacing: 0.5px;
     padding-top: 3%;
+}
+
+.besthistory {
+    text-align: center;
+    margin-top: 10%;
+}
+
+.besthistory h2 {
+    font-size: 210%;
+    color: #7E5A4E;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    line-height: 30px;
+    letter-spacing: 2px;
+}
+
+.besthistory h6 {
+    font-size: 210%;
+    margin-top: 1%;
+    color: #000000;
+    ;
+    font-family: 'Italianno', cursive;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 100%;
+    letter-spacing: 30%;
+}
+
+.besthistory img {
+    border-radius: 50%;
+}
+
+.besthistory p {
+    width: 60%;
+    margin: 0 auto;
+    font-size: 75%;
+    margin-top: 1%;
+    color: #A1A1A1;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    text-transform: capitalize;
+    line-height: 25px;
+    letter-spacing: 1px;
+}
+
+.besthistory p+p {
+    font-size: 80%;
+    font-family: 'Oswald', sans-serif;
+    line-height: 50px;
+    font-weight: 400;
+    color: #CCCCCC;;
+}
+
+.besthistory p+p+p {
+    font-size: 180%;
+    font-family: 'Italianno', cursive;
+    line-height: 10px;
+    font-weight: 400;
+    color:black;
 }
 
 .accardions {

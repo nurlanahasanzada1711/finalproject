@@ -202,14 +202,14 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section>
-          <div className='container'>
+        <section className={style.booktable}>
+          <div className={style.container}>
             <div className={style.row}>
               <div className={style.book}>
                 <h2>BOOK A TABLE</h2>
                 <h6>Submit Information To Place Order</h6>
-                <form>
-                  <TextField fullWidth style={{ display: "block", width: "465px", marginTop: "20px" }}
+                <form className={style.inputs}>
+                  <TextField fullWidth style={{ display: "block", width: "465px", marginTop: "20px", color: "FFF" }}
                     id="outlined-basic"
                     name="your name"
                     label="Your name"
@@ -257,8 +257,11 @@ const Home = () => {
               </div>
               <div className={style.contactus}>
                 <h2>CONTACT US</h2>
-                <p>PO Box 16122 Collins Victoria 3000 Australia</p>
+                <p><b>PO Box 16122 Collins Victoria 3000 Australia</b></p>
                 <h6>GALLERY</h6>
+                <p></p>
+                <p></p>
+                <p></p>
                 <div className={style.images}>
                   <img src={chocolate} alt='' />
                   <img src={fruit} alt='' />

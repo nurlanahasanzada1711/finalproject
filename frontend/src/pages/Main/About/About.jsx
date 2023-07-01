@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import style from '../About/about.module.css'
 import { styled } from '@mui/material/styles';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
@@ -6,14 +6,25 @@ import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
+import { getAllAbouts } from '../../../api/aboutrequests'
+
 
 
 const About = () => {
   const [expanded, setExpanded] = React.useState('panel1');
+  const [abouts, setAbouts] = useState([]);
+
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
+
+  useEffect(() => {
+    getAllAbouts().then((res) => {
+      setAbouts(res.data);
+      console.log(res.data);
+    });
+  }, []);
   const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
   ))(({ theme }) => ({
@@ -60,6 +71,24 @@ const About = () => {
             <br></br> cursus, et viverra elit dignissim. Nulla facilisi</p>
         </div>
       </section>
+
+      {abouts &&
+        abouts.map((about) => {
+          return (
+            <section className={style.besthistory}>
+              <img src={about.imageURL} alt='' />
+              <h2><b>THE BEST OF HISTORY</b>​</h2>
+              <h6>Love Story From Blog</h6>
+              <p>{about.desc}</p>
+              <p>{about.author}</p>
+              <p>{about.about}</p>
+            </section>
+          )
+        }
+        )}
+
+
+
       <section className={style.accardions}>
         <div className={style.working}>
           <h2>WORKING PROCESS</h2>

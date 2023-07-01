@@ -40,7 +40,7 @@ const historiesController = {
 
   deleteBlogs: async (req, res) => {
     const id = req.params.id;
-    const blog = await historiesModel.findByIdAndDelete(id);
+    const blog = await blogsModel.findByIdAndDelete(id);
     if (blog === undefined) {
       res.status(404).send("blog not found!");
     } else {
