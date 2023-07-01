@@ -104,6 +104,28 @@
     color:black;
 }
 
+.numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    text-align: center;
+    margin-top: 7%;
+}
+
+.pastry h1 {
+    font-size: 350%;
+    color: #7E5A4E;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 1000;
+}
+
+.pastry p {
+    font-size: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
 .accardions {
     background-image: url("../../../images//homemade.jpg");
     width: 100%;

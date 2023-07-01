@@ -7,11 +7,14 @@ import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import { getAllAbouts } from '../../../api/aboutrequests'
+import { getAllNumbers } from '../../../api/numbersrequests'
+
 
 
 
 const About = () => {
   const [expanded, setExpanded] = React.useState('panel1');
+  const [numbers, setNumbers] = useState([]);
   const [abouts, setAbouts] = useState([]);
 
 
@@ -25,6 +28,15 @@ const About = () => {
       console.log(res.data);
     });
   }, []);
+
+  useEffect(() => {
+    getAllNumbers().then((res) => {
+      setNumbers(res.data);
+      console.log(res.data);
+    });
+  }, []);
+
+
   const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
   ))(({ theme }) => ({
@@ -87,6 +99,22 @@ const About = () => {
         }
         )}
 
+      <section className='numbers'>
+        <div className='container'>
+          <div className={style.numbers}>
+            {numbers &&
+              numbers.map((number) => {
+                return (
+                  <div key={number._id} className={style.pastry}>
+                    <h1>{number.count}</h1>
+                    <p>{number.desc}</p>
+                  </div>
+                )
+              }
+              )}
+          </div>
+        </div>
+      </section>
 
 
       <section className={style.accardions}>
