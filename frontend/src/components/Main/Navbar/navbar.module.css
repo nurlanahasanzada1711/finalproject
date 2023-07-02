@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-header {
+.mainnav {
    
     width: 100%;
     height: 100vh;
@@ -21,20 +21,20 @@ header {
     gap: 15%;
 }
 
-.leftnav {}
 
-ul {
+
+.leftnav ul {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 70%;
 }
 
-ul li {
+.leftnav ul  li {
     list-style: none;
 }
 
-ul li a {
+.leftnav ul  li a {
     text-decoration: none;
     color: white;
     font-size: 120%;
@@ -42,7 +42,7 @@ ul li a {
     font-weight: 500;
 }
 
-ul li a:hover {
+.leftnav ul  li a:hover {
     color: #C68D7A;
 }
 

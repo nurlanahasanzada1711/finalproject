@@ -6,7 +6,15 @@ import Home from "../pages/Main/Home/Home";
 import MainRoot from "../pages/Main/MainRoot";
 import NotFound from "../pages/Main/NotFound";
 
+
+import AdminLogin from "../pages/Admin/AdminLogin/Login";
+import AdminHome from "../pages/Admin/AdminHome/AdminHome";
+import AdminRoot from "../pages/Admin/AdminRoot";
+
 export const ROUTES = [
+
+     //Main Root
+
     {
         path:'/',
         element: <MainRoot/>,
@@ -36,6 +44,22 @@ export const ROUTES = [
                 path:'*',
                 element: <NotFound/>
             }
+        ]
+    },
+
+     //Admin Root
+     {
+        path: '/admin',
+        element: <AdminRoot/>,
+        children: [
+            {
+                path:'',
+                element:<AdminHome/>
+            },
+            {
+                path:'login',
+                element: <AdminLogin/>
+            },
         ]
     }
 ]

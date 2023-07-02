@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+// import React, { useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
 import style from '../../Main/Navbar/navbar.module.css'
 // import { getAll, post } from '../../../api/requests';
-import axios from 'axios';
+// import axios from 'axios';
 import logo1 from '../../../images/Logo-1.png'
 
 
@@ -34,7 +34,7 @@ const Navbar = () => {
   // }
   return (
     <>
-      <header>
+      <header className={style.mainnav}>
         <nav>
           <div className='container'>
           <div className='row'>
@@ -56,7 +56,7 @@ const Navbar = () => {
               <div className={style.navlogo}>
                 <img src={logo1} alt='' />
               </div>
-              <div className='rightnav'>
+              <div className={style.leftnav}>
                 <ul>
                   <li>
                     <Link to='/shop'>Shop</Link>
