@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.inputs {
+  display: flex;
+  height: 80vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10%;
+}
+
+
+.submitbtn {
+    display: block;
+    margin-top: 10%;
+    margin: 20px auto;
+    color: white;
+    background-color: #5c4037;
+   
+    
+}
+
+.submitbtn:hover {
+    background-color:#C68D7A;;
+}
