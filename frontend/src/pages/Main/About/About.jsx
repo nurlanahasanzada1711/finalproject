@@ -8,6 +8,7 @@ import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import { getAllAbouts } from '../../../api/aboutrequests'
 import { getAllNumbers } from '../../../api/numbersrequests'
+import { getAllTeams } from '../../../api/teamrequests'
 
 
 
@@ -16,6 +17,7 @@ const About = () => {
   const [expanded, setExpanded] = React.useState('panel1');
   const [numbers, setNumbers] = useState([]);
   const [abouts, setAbouts] = useState([]);
+  const [teams, setTeams] = useState([]);
 
 
   const handleChange = (panel) => (event, newExpanded) => {
@@ -36,6 +38,12 @@ const About = () => {
     });
   }, []);
 
+  useEffect(() => {
+    getAllTeams().then((res) => {
+      setTeams(res.data);
+      console.log(res.data);
+    });
+  }, []);
 
   const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -116,6 +124,29 @@ const About = () => {
         </div>
       </section>
 
+      <section className={style.teambackground}>
+        <div className={style.teamwrites}>
+          <h2><b>MEET OUR CONFECTIONERS</b>​</h2>
+          <h6>The Best Team</h6>
+        </div>
+        <div className='container'>
+          <div className={style.teamflex}>
+
+            {teams &&
+              teams.map((team) => {
+                return (
+                  <div className={style.team}>
+                    <img src={team.imageURL} alt='' />
+                    <h4>{team.chef}</h4>
+                    <p>{team.desc}</p>
+                  </div>
+                )
+              }
+              )}
+
+          </div>
+        </div>
+      </section>
 
       <section className={style.accardions}>
         <div className={style.working}>
@@ -174,6 +205,8 @@ const About = () => {
           </Accordion>
         </div>
       </section>
+
+
     </main>
   )
 }

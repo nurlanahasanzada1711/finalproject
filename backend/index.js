@@ -9,6 +9,8 @@ const services_router = require('./routes/services.routes');
 const times_router = require('./routes/times.routes');
 const blogs_router = require('./routes/blogs.routes');
 const abouts_router = require('./routes/about.routes');
+const user_router = require('./routes/user.routes');
+const team_router = require('./routes/team.routes');
 const mongoose = require('mongoose');
 
 dotenv.config();
@@ -43,6 +45,14 @@ app.use('/api/blogs/', blogs_router)
 
 // ABOUT
 app.use('/api/abouts/', abouts_router)
+
+// USERS
+app.use('/',user_router)
+
+//TEAM
+app.use('/api/teams/', team_router)
+
+
 
 
 

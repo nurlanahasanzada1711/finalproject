@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Oswald:wght@300;600;700&family=Poppins:wght@200&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -96,7 +98,8 @@
     font-family: 'Oswald', sans-serif;
     line-height: 50px;
     font-weight: 400;
-    color: #CCCCCC;;
+    color: #CCCCCC;
+    ;
 }
 
 .besthistory p+p+p {
@@ -104,7 +107,7 @@
     font-family: 'Italianno', cursive;
     line-height: 10px;
     font-weight: 400;
-    color:black;
+    color: black;
 }
 
 .numbers {
@@ -173,5 +176,70 @@
     font-size: 150%;
     font-weight: 600;
     font-family: 'Oswald', sans-serif;
+}
 
+.teambackground {
+    background-image: url('../../../images/bg-about.jpg');
+    margin-top: 7%;
+    width: 100%;
+    height: 105vh;
+    
+}
+
+.teamwrites {
+    text-align: center;
+    padding-top: 5%;
+}
+
+.teamwrites h2 {
+    font-size: 210%;
+    color: #7E5A4E;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    line-height: 30px;
+    letter-spacing: 2px;
+}
+
+.teamwrites h6 {
+    font-size: 210%;
+    margin-top: 1%;
+    color: #7E5A4E;
+
+    font-family: 'Italianno', cursive;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 100%;
+    letter-spacing: 30%;
+}
+
+.teamflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    width: 75%;
+    text-align: center;
+    gap: 5%;
+}
+
+.team img {
+    width: 100%;
+}
+
+.team h4 {
+    margin-top: 1%;
+    font-size: 90%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    line-height: 30px;
+    letter-spacing: 30%;
+}
+
+.team p {
+    font-size: 90%;
+    color: #525252;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 30%;
 }

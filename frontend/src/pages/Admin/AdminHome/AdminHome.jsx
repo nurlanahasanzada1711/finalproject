@@ -3,7 +3,7 @@ import style from '../AdminHome/adminhome.module.css'
 const AdminHome = () => {
   return (
     <>
-    <h1>This is ADMIN PAGE!</h1>
+    <h1 className={style.admin}>This is ADMIN PAGE!</h1>
     </>
   )
 }
