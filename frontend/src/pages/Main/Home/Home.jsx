@@ -184,8 +184,18 @@ const Home = () => {
 
         <section className={style.care}>
           <img src={icon5} alt='' />
-          <h2>SPECIAL MENU</h2>
+          <h2>BAKERY CARE</h2>
           <h6>A Few Of Our Favourite Things</h6>
+          <div className='container'>
+            <div className='cardcrud'>
+              <div className='cards'>
+                <img src='' alt=''/>
+                <h2></h2>
+                <h5></h5>
+                <button>ADD TO CARD</button>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section className={style.times}>
