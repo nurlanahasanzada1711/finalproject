@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Oswald:wght@300&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Oswald:wght@300;600;700&family=Poppins:wght@200&display=swap');
 
 * {
     margin: 0;
@@ -13,58 +13,86 @@ footer {
     margin-top: 10%;
 }
 
+.footerbackground {
+    background-color: rgba(0, 0, 0, 0.759);
+    width: 100%;
+    height: 70vh;
+}
 .centerfooter {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10%;
+    gap: 7%;
 }
 
 .leftfooter {
+    padding-top: 10%;
     text-align: center;
     width: 25%;
 }
 
 .leftfooter h5 {
+    line-height: 40px;
+    letter-spacing: 2px;
     font-size: 100%;
     font-family: 'Oswald', sans-serif;
     color: white;
 }
 
 .leftfooter p {
+    line-height: 20px;
+    letter-spacing: 2px;
     margin-top: 6%;
+    width: 110%;
+    font-size: 100%;
+    font-weight: 700;
     font-family: 'Poppins', sans-serif;
     color: #A1A1A1;
 }
 
 .leftfooter span {
+    line-height: 20px;
+    letter-spacing: 2px;
     font-family: 'Poppins', sans-serif;
     margin-top: 5%;
     color: #A1A1A1;
+    font-weight: 700;
+    display: inline-block;
 }
 
 .rightfooter {
     width: 19%;
     text-align: center;
-    margin-top: 4%;
+    margin-top: 8%;
 }
 
 .rightfooter h5 {
     font-size: 100%;
     font-family: 'Oswald', sans-serif;
     color: white;
+    line-height: 50px;
+    letter-spacing: 2px;
 }
 
 .rightfooter p {
+    width: 120%;
+    line-height: 25px;
+    letter-spacing: 1px;
+    font-size: 90%;
+    font-weight: 800;
     margin-top: 6%;
     font-family: 'Poppins', sans-serif;
     color: #A1A1A1;
 }
 
-.rightfooter span {
+.rightfooter p+p {
+    color: #7E5A4E;
+}
+.rightfooter p+p+p {
     font-family: 'Poppins', sans-serif;
-    margin-top: 5%;
     color: #A1A1A1;
+    letter-spacing: 1px;
+    line-height: 2px;
 }
 
 .icons {
