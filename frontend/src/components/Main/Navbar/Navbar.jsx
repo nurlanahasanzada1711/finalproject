@@ -1,37 +1,11 @@
-// import React, { useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
 import style from '../../Main/Navbar/navbar.module.css'
-// import { getAll, post } from '../../../api/requests';
-// import axios from 'axios';
 import logo1 from '../../../images/Logo-1.png'
+import PersonAddIcon from '@mui/icons-material/PersonAdd';
 
 
 const Navbar = () => {
-  // const [selectedImage, setSelectedImage] = useState(null);
-  // const [data, setData] = useState([]);
-  // const [name, setName] = useState("");
 
-  // useEffect(() => {
-  //   getAll().then((res) => {
-  //     setData(res);
-  //   });
-  // }, []);
-
-  // function uploadImage() {
-  //   const formData = new FormData();
-  //   formData.append("file", selectedImage);
-  //   formData.append("upload_preset", "m0t3zqcy");
-  //   axios
-  //     .post("https://api.cloudinary.com/v1_1/dlytnxzbx/image/upload", formData)
-  //     .then((res) => {
-  //       const newData = {
-  //         name: name,
-  //         imageURL: res.data.secure_url,
-  //       };
-  //       setData([...data, newData]);
-  //       post(newData);
-  //     });
-  // }
   return (
     <>
       <header className={style.mainnav}>
@@ -60,13 +34,14 @@ const Navbar = () => {
                 <ul>
                   <li>
                     <Link to='/shop'>Shop</Link>
-                  </li>
+                    </li>
                   <li>
                     <Link to='/blog'>Blog</Link>
                   </li>
                   <li>
                     <Link to='/contact'>Contact</Link>
                   </li>
+                  <li style={{color:"white"}}><Link to='/register'><PersonAddIcon/></Link></li>
                 </ul>
               </div>
             </div>

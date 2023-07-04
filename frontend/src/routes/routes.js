@@ -10,6 +10,7 @@ import NotFound from "../pages/Main/NotFound";
 import AdminLogin from "../pages/Admin/AdminLogin/Login";
 import AdminHome from "../pages/Admin/AdminHome/AdminHome";
 import AdminRoot from "../pages/Admin/AdminRoot";
+import RegisterPage from "../pages/Main/RegisterPage/RegisterPage";
 
 export const ROUTES = [
 
@@ -38,6 +39,10 @@ export const ROUTES = [
             {
                 path:'/contact',
                 element: <Contact/>
+            },
+            {
+                path:'/register',
+                element: <RegisterPage/>
             },
             
             {
