@@ -11,6 +11,8 @@ import AdminLogin from "../pages/Admin/AdminLogin/Login";
 import AdminHome from "../pages/Admin/AdminHome/AdminHome";
 import AdminRoot from "../pages/Admin/AdminRoot";
 import RegisterPage from "../pages/Main/RegisterPage/RegisterPage";
+import LoginPage from "../pages/Main/LoginPage/LoginPage";
+import Users from "../pages/Main/Users/Users";
 
 export const ROUTES = [
 
@@ -44,7 +46,14 @@ export const ROUTES = [
                 path:'/register',
                 element: <RegisterPage/>
             },
-            
+            {
+                path:'/login',
+                element: <LoginPage/>
+            },
+            {
+                path:'/users',
+                element: <Users/>
+            },
             {
                 path:'*',
                 element: <NotFound/>

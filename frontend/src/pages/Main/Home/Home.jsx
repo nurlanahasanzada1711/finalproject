@@ -15,6 +15,7 @@ import { getAllHistories } from '../../../api/historyrequests'
 import { getAllServices } from '../../../api/servicesrequests'
 import { getAllTimes } from '../../../api/timesrequests'
 import { getAllBlogs } from '../../../api/blogsrequests'
+import { getAllMenus } from '../../../api/menurequests'
 
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
   const [services, setServices] = useState([]);
   const [times, setTimes] = useState([]);
   const [blogs, setBlogs] = useState([]);
+  const [menus, setMenus] = useState([]);
 
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
@@ -68,6 +70,13 @@ const Home = () => {
   useEffect(() => {
     getAllBlogs().then((res) => {
       setBlogs(res.data);
+      console.log(res.data);
+    });
+  }, []);
+
+  useEffect(() => {
+    getAllMenus().then((res) => {
+      setMenus(res.data);
       console.log(res.data);
     });
   }, []);
@@ -140,9 +149,34 @@ const Home = () => {
           <h2>TESTIMONALS</h2>
           <h6>What Clients Say About Us</h6>
         </section>
+        <section className={style.menubackground}>
+          <div className={style.menu}>
+            <h2>BAKERY CARE</h2>
+            <h6>The Best Our Menu Bakery</h6>
+          </div>
+          {menus &&
+            menus.map((menu) => {
+              return (
+                <div className={style.menuprice}>
+
+                  <div className={style.menuimg}>
+                    <img src={menu.imageURL} alt='' />
+                  </div>
+                  <div className={style.menuinc}>
+                    <h4>{menu.dessert}</h4>
+                    <h5>{menu.price}</h5>
+                    <p>{menu.desc}</p>
+                  </div>
+                </div>
+              )
+            }
+            )}
+
+        </section>
+
         <section className={style.care}>
           <img src={icon5} alt='' />
-          <h2>BAKERY CARE</h2>
+          <h2>SPECIAL MENU</h2>
           <h6>A Few Of Our Favourite Things</h6>
         </section>
 
