@@ -13,6 +13,7 @@ import AdminRoot from "../pages/Admin/AdminRoot";
 import RegisterPage from "../pages/Main/RegisterPage/RegisterPage";
 import LoginPage from "../pages/Main/LoginPage/LoginPage";
 import Users from "../pages/Main/Users/Users";
+import Services from "../pages/Admin/Services/Services";
 import AddServices from "../pages/Admin/AddServices/AddServices";
 
 export const ROUTES = [
@@ -77,6 +78,10 @@ export const ROUTES = [
             },
             {
                 path:'services',
+                element: <Services/>
+            },
+            {
+                path:'addservices',
                 element: <AddServices/>
             },
         ]
