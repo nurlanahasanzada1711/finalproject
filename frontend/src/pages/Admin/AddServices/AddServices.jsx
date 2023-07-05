@@ -65,7 +65,7 @@ const AddServices = () => {
                     >
                       Delete
                     </Button>
-                    <button>Edit</button>
+                    <Button style={{padding : '3% 8%'}} >Edit</Button>
                   </div>
                 )
               }
