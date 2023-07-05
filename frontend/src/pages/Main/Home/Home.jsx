@@ -114,7 +114,7 @@ const Home = () => {
               {services &&
                 services.map((service) => {
                   return (
-                    <div className={style.cakecrud}>
+                    <div key={service._id} className={style.cakecrud}>
                       <img src={service.imageURL} alt='' />
                       <h2>{service.desc}</h2>
                       <p>{service.about}</p>

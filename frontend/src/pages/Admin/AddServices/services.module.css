@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Oswald:wght@300&family=Poppins:wght@200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sect2 {
+    text-align: center;
+    padding-top: 10%;
+}
+
+.sect2 img {
+    width: 13%;
+
+}
+
+.sect2 h2 {
+    font-size: 210%;
+    color: #7E5A4E;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    line-height: 30px;
+    letter-spacing: 2px;
+}
+
+.sect2 h6 {
+    font-size: 210%;
+    margin-top: 1%;
+    color: #000000;
+    font-family: 'Italianno', cursive;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 100%;
+    letter-spacing: 30%;
+}
+
+.freshservices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7%;
+    margin-top: 5%;
+    margin-bottom: 20%;
+}
+
+.cakecrud {
+    text-align: center;
+    width: 20%;
+    height: 30vh;
+}
+
+.cakecrud img {
+    width: 90%;
+    height: 35vh;
+    border-radius: 100%;
+    border: 5px solid #7E5A4E;
+    ;
+}
+
+.cakecrud h2 {
+    font-size: 120%;
+    margin-top: 7%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 1000;
+    line-height: 160%;
+}
+
+
+.cakecrud p {
+    margin-top: 7%;
+    color: #A1A1A1;
+    font-family: 'Poppins', sans-serif;
+    font-size: 90%;
+    font-weight: 700;
+}
+
+.cakecrud button {
+    background-color: #7E5A4E;
+    border: none;
+    color: white;
+    margin-top: 5%;
+    padding: 3% 5%;
+}
+
+.cakecrud button:hover {
+    border: 1px solid  #7E5A4E;
+    color: #7E5A4E;
+}
