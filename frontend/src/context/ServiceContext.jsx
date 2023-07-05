@@ -1,23 +1,23 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-const ServiceContext = createContext();
+const TeamContext = createContext();
 
 // eslint-disable-next-line react/prop-types
-export const ServiceContextProvider = ({children}) => {
-   const [service, setService] = useState(null);
+export const TeamContextProvider = ({children}) => {
+   const [team, setTeam] = useState(null);
    useEffect(()=>{
-    if (localStorage.getItem('service')) {
-        setService(localStorage.getItem('service'));
+    if (localStorage.getItem('team')) {
+        setTeam(localStorage.getItem('team'));
     }
    },[])
     const values = [
-        service,setService
+        team,setTeam
     ]
     return (
-        <ServiceContext.Provider value={values}>
+        <TeamContext.Provider value={values}>
             {children}
-        </ServiceContext.Provider>
+        </TeamContext.Provider>
     )
 }
 
-export const useServiceContext = ()=> useContext(ServiceContext);
+export const useTeamContext = ()=> useContext(TeamContext);

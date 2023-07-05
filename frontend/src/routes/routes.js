@@ -92,7 +92,7 @@ export const ROUTES = [
                 element: <AddServices/>
             },
             {
-                path:'editservices',
+                path:'services/edit/:id',
                 element: <EditServices/>
             },
             {
@@ -100,7 +100,7 @@ export const ROUTES = [
                 element: <Products/>
             },
             {
-                path:'editproducts',
+                path:'products/edit/:id',
                 element: <EditProducts/>
             },
             {
@@ -116,7 +116,7 @@ export const ROUTES = [
                 element: <EditEmployees/>
             },
             {
-                path:'addemployees',
+                path:'employees/edit/:id',
                 element: <AddEmployees/>
             },
         ]

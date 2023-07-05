@@ -25,7 +25,7 @@ const Services = () => {
         <img src={icon} alt='' />
         <h2>FRESH SERVICES</h2>
         <h6>The Best Of Our Services</h6> 
-        <Link to='/admin/addservices'><Button>Add Services</Button></Link>
+        <Link to='/admin/services'><Button>Add Services</Button></Link>
       </section>
 
      
@@ -69,7 +69,7 @@ const Services = () => {
                     >
                       Delete
                     </Button>
-                    <Link to='/admin/editservices'><Button style={{ padding: '3% 8%' }}>Edit</Button></Link>
+                    <Link to={`/admin/services/edit/${service._id}`}><Button style={{ padding: '3% 8%' }}>Edit</Button></Link>
                   </div>
                 )
               }
