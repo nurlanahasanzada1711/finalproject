@@ -9,3 +9,31 @@
 .addlogin {
     padding-top: 10%;
 }
+
+.addlogin h2 {
+    text-align: center;
+    font-size: 200%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    color: #7E5A4E;
+    line-height: 70px;
+    letter-spacing: 1px;
+}
+
+.addbutton {
+    text-align: center;
+}
+
+.addbutton button {
+    margin-top: 2%;
+    background-color:  #7E5A4E;
+    padding: 1% 2%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 1px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 110%;
+}

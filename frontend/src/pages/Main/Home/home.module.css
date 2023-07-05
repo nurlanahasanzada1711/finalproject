@@ -360,6 +360,7 @@
 
 .productcards {
     width: 20%;
+    margin-top: 5%;
     margin-bottom: 5%;
     margin-left: 1%;
     margin-right: 1%;
@@ -387,7 +388,7 @@
     font-family: 'Oswald', sans-serif;
     font-weight: 600;
     color: #7E5A4E;
-    ;
+   
 }
 
 .productcards button {
