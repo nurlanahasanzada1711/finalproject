@@ -51,7 +51,7 @@ export const ROUTES = [
                 element: <LoginPage/>
             },
             {
-                path:'/users',
+                path:'/users',  
                 element: <Users/>
             },
             {

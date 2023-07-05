@@ -7,22 +7,63 @@
 .registerbackground {
     background-image: url('../../../images/bakery.jpg');
     width: 100%;
-    height: 70vh;
+    height: 50vh;
     background-position: center center;
     background-size: cover;
 }
 
 .registerimage {
     width: 100%;
-    height: 70vh;
-    background-color: rgba(0, 0, 0, 0.585);
+    height: 50vh;
+    background-color: rgba(0, 0, 0, 0.462);
 }
 
 .registerimage h1 {
-    padding-top: 15%;
+    padding-top: 12%;
     text-align: center;
     color: white;
-    font-size: 190%;
+    font-size: 300%;
     font-family: 'Oswald', sans-serif;
+    line-height: 60px;
+    letter-spacing: 5px;
 
+}
+
+.registerinputs {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.registertext h1 {
+    font-size: 200%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    color: #7E5A4E;
+    line-height: 70px;
+    letter-spacing: 2px;
+}
+
+.registertext h2 {
+    font-size: 150%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #A1A1A1;
+    line-height: 50px;
+    letter-spacing: 1px;
+}
+
+.forminput {
+    width: 20%;
+    font-size: 200%;
+    text-align: center;
+}
+
+.registerbtn button {
+    margin-top: 2%;
+    background-color:  #7E5A4E;
+    padding: 1% 2%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 3px;
 }

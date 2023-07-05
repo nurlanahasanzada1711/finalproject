@@ -109,7 +109,7 @@ export default function LoginM() {
             email: values.email,
             password: values.password,
         });
-        console.log(response);
+        console.log(response );
         if (response.auth) {
             localStorage.setItem('token', response.token);
             localStorage.setItem('user', JSON.stringify(response.user));

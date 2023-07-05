@@ -3,21 +3,20 @@ import { Button, TextField } from "@mui/material";
 import { useFormik } from "formik";
 import { signIn } from "../../../api/loginrequests";
 import Swal from "sweetalert2";
-import { useState } from "react";
-import style from '../AdminLogin/login.module.css'
-
+import { useUserContext } from "../../../context/UserContext";
 
 const Login = () => {
-  const [user, setUser] = useState();
+  const [user, setUser] = useUserContext();
   const navigate = useNavigate();
   const handleSubmit = async (values, actions) => {
+    console.log(values);
     const response = await signIn({
-      username: values.username,
+      email: values.email,
       password: values.password,
     });
     if (response.auth) {
-      localStorage.setItem('token', response.token);
-      localStorage.setItem('user', JSON.stringify(response.user));
+      localStorage.setItem('token',response.token);
+      localStorage.setItem('user',JSON.stringify(response.user));
       setUser(response.user);
       Swal.fire({
         position: "top-end",
@@ -27,36 +26,46 @@ const Login = () => {
         timer: 1200,
       });
       actions.resetForm();
-      navigate("/admin");
+      if (values.email == 'nurlana@code.edu.az') {
+        navigate('/admin')
+      }
+      else{
+        navigate('/users')
+      }
     }
   };
   const formik = useFormik({
     initialValues: {
-      username: "",
+      email: "",
       password: "",
     },
     onSubmit: handleSubmit,
   });
   return (
-    <div className={style.inputs}
+    <div
+      style={{
+        display: "flex",
+        height: "80vh",
+        width: "100%",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
     >
-
-      <div className={style.useradmin}>
-        <form onSubmit={formik.handleSubmit}>
+      <form onSubmit={formik.handleSubmit}>
+        <div>
           <TextField
-            className={style.nameadmin}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            name="username"
-            value={formik.values.username}
+            name="email"
+            value={formik.values.email}
             type="text"
             id="outlined-basic"
-            label="Username"
-            variant="standard"
+            label="Email"
+            variant="outlined"
           />
-
+        </div>
+        <div>
           <TextField
-            className="passwordadmin"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             name="password"
@@ -64,19 +73,18 @@ const Login = () => {
             type="password"
             id="outlined-basic"
             label="Password"
-            variant="standard"
+            variant="outlined"
           />
-
-          <Button
-            className={style.submitbtn}
-            type="submit"
-            variant="contained"
-          >
-            Login
-          </Button>
-        </form>
-      </div>
-
+        </div>
+        <Button
+          type="submit"
+          style={{ display: "block", margin: "30px auto" }}
+          variant="contained"
+          color="warning"
+        >
+          Login
+        </Button>
+      </form>
     </div>
   );
 };
