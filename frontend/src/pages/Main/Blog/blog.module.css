@@ -50,3 +50,35 @@
     font-family: 'Poppins', sans-serif;
     font-size: 100%;
 }
+
+.down {
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.strowberry {
+    width: 34%;
+}
+
+.strowberry h2 {
+    font-size: 120%;
+    line-height: 24px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+}
+
+.strowberry p {
+    font-size: 100%;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 24px;
+    font-family: 'Oswald', sans-serif;
+
+}
+
+.strowberry img {
+    width: 78%;
+    height: 45vh;
+}
