@@ -36,6 +36,21 @@
     letter-spacing: 30%;
 }
 
+.sect2 button {
+    margin-top: 2%;
+    font-size: 90%;
+    padding: 1% 2%;
+    border: none;
+    background-color: #7E5A4E;
+    color: white;
+}
+
+.sect2 button:hover {
+    color: #7E5A4E;
+    border: 1px solid  #7E5A4E;
+    background-color: white;
+}
+
 .freshservices {
     display: flex;
     justify-content: center;
@@ -88,19 +103,6 @@
 .cakecrud button:hover {
     border: 1px solid  #7E5A4E;
     color: #7E5A4E ;
+    background-color: white;
 }
 
-.addbtn {
-    margin-top: 2%;
-    margin-left: 45%;
-    font-size: 120%;
-    padding: 1% 2%;
-    border: none;
-    background-color: #7E5A4E;
-    
-}
-
-.addbtn a{
-    text-decoration: none;
-    color: white;
-}

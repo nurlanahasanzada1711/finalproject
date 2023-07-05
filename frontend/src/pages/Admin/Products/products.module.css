@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Oswald:wght@300&family=Poppins:wght@200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.care {
+    text-align: center;
+    /* margin-top: 5%; */
+}
+
+.care img {
+    width: 12%;
+}
+
+.care h2 {
+    font-size: 210%;
+    color: #7E5A4E;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    line-height: 30px;
+    letter-spacing: 2px;
+}
+
+
+.care h6 {
+    font-size: 210%;
+    margin-top: 1%;
+    color: #000000;
+    font-family: 'Italianno', cursive;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 100%;
+    letter-spacing: 30%;
+}
+
+
+.productcrud {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    flex-wrap: wrap;
+}
+
+.productcards {
+    width: 20%;
+    margin-bottom: 5%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.productcards img {
+    width: 85%;
+    border-radius: 50%;
+    border: 2px solid #7E5A4E;
+    height: 33vh;
+}
+
+.productcards h3 {
+    margin-top: 5%;
+    font-size: 120%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+}
+
+.productcards h5 {
+    font-size: 100%;
+    margin-top: 5%;
+    line-height: 100%;
+    letter-spacing: 30%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    color: #7E5A4E;
+    ;
+}
+
+.productcards button {
+    font-size: 90%;
+    margin-top: 7%;
+    padding: 4% 7%;
+    background-color: #7E5A4E;
+    border: 1px solid #7E5A4E;
+    border: none;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    margin-left: 5%;
+}

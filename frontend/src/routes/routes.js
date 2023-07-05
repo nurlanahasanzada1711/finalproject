@@ -15,6 +15,9 @@ import LoginPage from "../pages/Main/LoginPage/LoginPage";
 import Users from "../pages/Main/Users/Users";
 import Services from "../pages/Admin/Services/Services";
 import AddServices from "../pages/Admin/AddServices/AddServices";
+import EditServices from "../pages/Admin/EditServices/EditServices";
+import Products from "../pages/Admin/Products/Products";
+import EditProducts from "../pages/Admin/EditProducts/EditProducts";
 
 export const ROUTES = [
 
@@ -83,6 +86,18 @@ export const ROUTES = [
             {
                 path:'addservices',
                 element: <AddServices/>
+            },
+            {
+                path:'editservices',
+                element: <EditServices/>
+            },
+            {
+                path:'products',
+                element: <Products/>
+            },
+            {
+                path:'editproducts',
+                element: <EditProducts/>
             },
         ]
     }

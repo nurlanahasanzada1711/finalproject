@@ -90,6 +90,8 @@
     gap: 7%;
     margin-top: 5%;
     margin-bottom: 20%;
+    flex-wrap: wrap;
+    margin-bottom: 20%;
 }
 
 .cakecrud {

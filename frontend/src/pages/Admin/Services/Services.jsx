@@ -24,11 +24,11 @@ const Services = () => {
       <section className={style.sect2}>
         <img src={icon} alt='' />
         <h2>FRESH SERVICES</h2>
-        <h6>The Best Of Our Services</h6>
+        <h6>The Best Of Our Services</h6> 
+        <Link to='/admin/addservices'><Button>Add Services</Button></Link>
       </section>
 
-      <button className={style.addbtn}><Link to='/admin/addservices'>Add Services</Link></button>
-
+     
       <section>
         <div className='container'>
           <div className={style.freshservices}>
@@ -69,14 +69,14 @@ const Services = () => {
                     >
                       Delete
                     </Button>
-                    <Button style={{ padding: '3% 8%' }} >Edit</Button>
+                    <Link to='/admin/editservices'><Button style={{ padding: '3% 8%' }}>Edit</Button></Link>
                   </div>
                 )
               }
               )}
           </div>
         </div>
-      </section>
+      </section >
     </>
   )
 }

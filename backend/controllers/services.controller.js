@@ -21,6 +21,20 @@ const servicesController = {
     }
   },
 
+  getServicesById: async (req, res) => {
+    const id = req.params.id;
+    const service = await servicesModel.findById(id);
+    console.log("service found", service);
+    if (!service) {
+      res.status(200).send("Data not found!")
+    } else {
+      res.status(200).send({
+        data: service,
+        message: "Data get success!",
+      });
+    }
+  },
+
   postServices: async (req, res) => {
     const {
       desc,
@@ -29,8 +43,8 @@ const servicesController = {
     } = req.body;
     const newservices = new servicesModel({
       desc: desc,
-      imageURL:imageURL,
-      about:about
+      imageURL: imageURL,
+      about: about
     });
     await newservices.save();
     res.status(201).send("created");
@@ -48,6 +62,25 @@ const servicesController = {
       });
     }
   },
+
+  editServices: async (req, res) => {
+    const id = req.params.id;
+    const {
+      desc,
+      about,
+      imageURL
+    } = req.body;
+    const existedService = await servicesModel.findByIdAndUpdate(id);
+    if (existedService == undefined) {
+      res.status(404).send("Service not found!");
+    } else {
+      res.status(200).send({
+        about: about,
+        desc: desc,
+        imageURL: imageURL,
+      });
+    }
+  }
 
 };
 

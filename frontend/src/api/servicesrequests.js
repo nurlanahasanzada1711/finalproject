@@ -11,8 +11,16 @@ export const getAllServices = async()=>{
     return globalData
 }
 
-export const postServices = (payload)=>{
-    axios.post(`${BASE_URL}/services`,payload);
+export const getServicesById = async (id) => {
+    let globalData
+    await axios.get(`${BASE_URL}/services/${id}`).then((res) => {
+        globalData = res.data
+    })
+    return globalData
+}
+
+export const postServices = async(payload)=>{
+  await  axios.post(`${BASE_URL}/services`,payload);
 }
 
 export const deleteServices = async (id) => {
@@ -21,4 +29,9 @@ export const deleteServices = async (id) => {
         deletedData = res.data
     })
     return deletedData
+}
+
+
+export const editServices = async (id, newServices) => {
+    await axios.put(`${BASE_URL}/services/${id}`, newServices)
 }
