@@ -23,6 +23,7 @@ const Products = () => {
                 <img src={icon5} alt='' />
                 <h2>BAKERY CARE</h2>
                 <h6>A Few Of Our Favourite Things</h6>
+                <Link to='/admin/addproducts'><Button>Add Products</Button></Link>
                 <div className='container'>
                     <div className={style.productrow}>
                         <div className={style.productcrud}>

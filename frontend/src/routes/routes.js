@@ -18,6 +18,10 @@ import AddServices from "../pages/Admin/AddServices/AddServices";
 import EditServices from "../pages/Admin/EditServices/EditServices";
 import Products from "../pages/Admin/Products/Products";
 import EditProducts from "../pages/Admin/EditProducts/EditProducts";
+import AddProducts from "../pages/Admin/AddProducts/AddProducts";
+import Employees from "../pages/Admin/Employees/Employees";
+import EditEmployees from "../pages/Admin/EditEmployees/EditEmployees";
+import AddEmployees from "../pages/Admin/AddEmployees/AddEmployees";
 
 export const ROUTES = [
 
@@ -98,6 +102,22 @@ export const ROUTES = [
             {
                 path:'editproducts',
                 element: <EditProducts/>
+            },
+            {
+                path:'addproducts',
+                element: <AddProducts/>
+            },
+            {
+                path:'employees',
+                element: <Employees/>
+            },
+            {
+                path:'editemployees',
+                element: <EditEmployees/>
+            },
+            {
+                path:'addemployees',
+                element: <AddEmployees/>
             },
         ]
     }

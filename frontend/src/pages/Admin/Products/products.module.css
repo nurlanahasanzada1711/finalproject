@@ -36,6 +36,20 @@
     letter-spacing: 30%;
 }
 
+.care button {
+    margin-top: 2%;
+    font-size: 90%;
+    padding: 1% 2%;
+    border: none;
+    background-color: #7E5A4E;
+    color: white;
+}
+
+.care button:hover {
+    color: #7E5A4E;
+    border: 1px solid  #7E5A4E;
+    background-color: white;
+}
 
 .productcrud {
     display: flex;
@@ -89,3 +103,4 @@
     font-weight: 600;
     margin-left: 5%;
 }
+

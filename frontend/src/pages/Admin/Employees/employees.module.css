@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Oswald:wght@300;600;700&family=Poppins:wght@200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.teambackground {
+    background-image: url('../../../images/bg-about.jpg');
+    width: 100%;
+    height: 150vh;
+    padding-top: 6%;
+    margin-bottom: 5%;
+}
+
+.teamwrites {
+    text-align: center;
+    padding-top: 5%;
+}
+
+.teamwrites h2 {
+    font-size: 210%;
+    color: #7E5A4E;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    line-height: 30px;
+    letter-spacing: 2px;
+}
+
+.teamwrites h6 {
+    font-size: 210%;
+    margin-top: 1%;
+    color: #7E5A4E;
+
+    font-family: 'Italianno', cursive;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 100%;
+    letter-spacing: 30%;
+}
+
+.teamflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 80px auto;
+    width: 50%;
+    text-align: center;
+    gap: 5%;
+}
+
+.team img {
+    width: 100%;
+}
+
+.team h4 {
+    margin-top: 1%;
+    font-size: 90%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    line-height: 30px;
+    letter-spacing: 30%;
+}
+
+.team p {
+    font-size: 90%;
+    color: #525252;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 30%;
+}
+
+
+.team button {
+    font-size: 90%;
+    margin-top: 7%;
+    padding: 3% 7%;
+    background-color: #7E5A4E;
+    border: 1px solid #7E5A4E;
+    border: none;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    margin-left: 5%;
+}
+
+
+.teamwrites button {
+    margin-top: 2%;
+    font-size: 90%;
+    padding: 1% 2%;
+    border: none;
+    background-color: #7E5A4E;
+    color: white;
+}
+
+.teamwrites button:hover {
+    color: #7E5A4E;
+    border: 1px solid  #7E5A4E;
+    background-color: white;
+}
