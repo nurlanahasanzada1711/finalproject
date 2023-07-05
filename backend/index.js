@@ -11,6 +11,7 @@ const blogs_router = require('./routes/blogs.routes');
 const abouts_router = require('./routes/about.routes');
 const team_router = require('./routes/team.routes');
 const menu_router = require('./routes/menu.routes');
+const product_router = require('./routes/product.routes');
 const mongoose = require('mongoose');
 
 dotenv.config();
@@ -52,6 +53,10 @@ app.use('/api/teams/', team_router)
 
 // MENUS
 app.use('/api/menus/', menu_router)
+
+// PRODUCTS
+app.use('/api/products/', product_router)
+
 
 
 

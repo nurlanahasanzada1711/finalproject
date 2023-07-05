@@ -9,14 +9,14 @@
 footer {
     background-image: url("../../../images//bread-footer.jpg");
     width: 100%;
-    height: 70vh;
+    height: 90vh;
     margin-top: 10%;
 }
 
 .footerbackground {
     background-color: rgba(0, 0, 0, 0.759);
     width: 100%;
-    height: 70vh;
+    height: 90vh;
 }
 .centerfooter {
     display: flex;
@@ -63,7 +63,7 @@ footer {
 .rightfooter {
     width: 19%;
     text-align: center;
-    margin-top: 8%;
+    margin-top: 13%;
 }
 
 .rightfooter h5 {

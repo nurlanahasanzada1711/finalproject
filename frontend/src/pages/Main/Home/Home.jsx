@@ -10,13 +10,15 @@ import bakery from '../../../images/bakery.jpg'
 import { useState } from 'react'
 import ReactDOM from 'react-dom'
 import ModalVideo from 'react-modal-video'
+import logo from '../../../images/Logo-1.png'
 import { getAllNumbers } from '../../../api/numbersrequests'
 import { getAllHistories } from '../../../api/historyrequests'
 import { getAllServices } from '../../../api/servicesrequests'
 import { getAllTimes } from '../../../api/timesrequests'
 import { getAllBlogs } from '../../../api/blogsrequests'
 import { getAllMenus } from '../../../api/menurequests'
-import logo from '../../../images/Logo-1.png'
+import { getAllProducts } from '../../../api/productrequests'
+
 
 
 const Home = () => {
@@ -27,6 +29,7 @@ const Home = () => {
   const [times, setTimes] = useState([]);
   const [blogs, setBlogs] = useState([]);
   const [menus, setMenus] = useState([]);
+  const [products, setProducts] = useState([]);
 
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
@@ -78,6 +81,13 @@ const Home = () => {
   useEffect(() => {
     getAllMenus().then((res) => {
       setMenus(res.data);
+      console.log(res.data);
+    });
+  }, []);
+
+  useEffect(() => {
+    getAllProducts().then((res) => {
+      setProducts(res.data);
       console.log(res.data);
     });
   }, []);
@@ -170,14 +180,14 @@ const Home = () => {
                       <h5>{menu.price}</h5>
                       <p>{menu.desc}</p>
                     </div>
-                    
+
                   </div>
                 )
               }
               )}
 
-             <img className={style.logoimg} src={logo} alt=''/>
-          </div> 
+            <img className={style.logoimg} src={logo} alt='' />
+          </div>
 
 
         </section>
@@ -187,12 +197,20 @@ const Home = () => {
           <h2>BAKERY CARE</h2>
           <h6>A Few Of Our Favourite Things</h6>
           <div className='container'>
-            <div className='cardcrud'>
-              <div className='cards'>
-                <img src='' alt=''/>
-                <h2></h2>
-                <h5></h5>
-                <button>ADD TO CARD</button>
+            <div className={style.productrow}>
+              <div className={style.productcrud}>
+                {products &&
+                  products.map((product) => {
+                    return (
+                      <div className={style.productcards}>
+                        <img src={product.imageURL} alt='' />
+                        <h3>{product.desc}</h3>
+                        <h5>{product.price}</h5>
+                        <button>SELECT OPTIONS</button>
+                      </div>
+                    )
+                  }
+                  )}
               </div>
             </div>
           </div>
