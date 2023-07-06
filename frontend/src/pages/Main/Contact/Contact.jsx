@@ -34,11 +34,11 @@ const Contact = () => {
         <section>
           <div className='container'>
             <div className='inforow'>
-              <div className='infoflex'>
+              <div className={style.infoflex}>
                 {contacts &&
                   contacts.map((contact) => {
                     return (
-                      <div className='infocrud'>
+                      <div className={style.infocrud}>
                         <img src={contact.imageURL} alt='' />
                         <p>{contact.desc}</p>
                         <p>{contact.about}</p>
@@ -46,21 +46,24 @@ const Contact = () => {
                     )
                   }
                   )}
-                <img src={n} alt='' />
-                <ul >
-                  <li>
-                    <FacebookIcon />
-                  </li>
-                  <li>
-                    <TwitterIcon />
-                  </li>
-                  <li>
-                    <YouTubeIcon />
-                  </li>
-                  <li>
-                    <GoogleIcon />
-                  </li>
-                </ul>
+                <div className={style.infocrud}>
+                  <img src={n} alt='' />
+                  <ul >
+                    <li>
+                      <FacebookIcon />
+                    </li>
+                    <li>
+                      <TwitterIcon />
+                    </li>
+                    <li>
+                      <YouTubeIcon />
+                    </li>
+                    <li>
+                      <GoogleIcon />
+                    </li>
+                  </ul>
+                </div>
+
               </div>
             </div>
           </div>
