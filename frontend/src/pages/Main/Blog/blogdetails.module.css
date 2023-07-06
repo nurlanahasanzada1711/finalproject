@@ -59,10 +59,10 @@
 .firstdetail h1 {
     width: 55%;
     line-height: 48px;
+    letter-spacing: 1px;
     font-size: 300%;
     font-weight: 900;
     font-family: 'Poppins', sans-serif;
-    letter-spacing: 1px;
     margin-left: 5%;
 }
 
@@ -132,4 +132,38 @@ ul li {
 ul li:hover {
     color: #C68D7A;
 
+}
+
+.adminflex {
+    display: flex;
+    margin-top: 5%;
+}
+
+.adminrow {
+    margin-left: 10%;
+}
+.adminpic {
+    width: 10%;
+}
+
+.adminpic img {
+    margin-top: 7%;
+    width: 80%;
+}
+
+.post {
+    width: 55%;
+}
+
+.post h4 {
+    font-size: 100%;
+    font-family: 'Oswald', sans-serif;
+    line-height: 45px;
+}
+
+.post p {
+    font-size: 90%;
+    color:  #A1A1A1;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }

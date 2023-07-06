@@ -6,6 +6,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import GoogleIcon from '@mui/icons-material/Google';
+import bakingbread from '../../../images/baking-bread.png'
 const BlogDetails = () => {
     return (
         <>
@@ -108,11 +109,28 @@ const BlogDetails = () => {
                         <GoogleIcon />
                     </li>
                 </ul>
+            </section>
 
+            <section>
+                <div className='container'>
+                    <div className={style.adminrow}>
+                        <div className={style.adminflex}>
+                            <div className={style.adminpic}>
+                                <img src={bakingbread} alt='' />
+                            </div>
+                            <div className={style.post}>
+                                <h4>POSTED BY ADMIN</h4>
+                                <p>consectetur, adipisci velit, sed quia non
+                                    numquam eius modi tempora incidunt ut labore et
+                                    dolore magnam aliquam quaerat voluptatem.
+                                    Aenean commodo ligula eget dolor aenean massa.
+                                    Cum sociis natoque penatibus et magnis dis
+                                    parturient montes, nascetur ridiculus mus.</p>
+                            </div>
+                        </div>
 
-
-
-
+                    </div>
+                </div>
             </section>
         </>
     )
