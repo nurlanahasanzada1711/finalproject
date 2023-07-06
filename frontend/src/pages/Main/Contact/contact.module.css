@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Oswald:wght@300&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Oswald:wght@300;400&family=Poppins:wght@200;600&display=swap');
 
 * {
     margin: 0;
@@ -27,14 +27,14 @@
     font-size: 850%;
     color: white;
     font-family: 'Oswald', sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     /* line-height: 2px; */
     letter-spacing: 5px;
 }
 
 .contactwrite p {
     color: #A1A1A1;
-    font-weight: 1000;
+    font-weight: 600;
     /* line-height: 180px; */
     /* letter-spacing: 1px; */
     font-family: 'Poppins', sans-serif;
@@ -44,7 +44,7 @@
 .contactwrite p+p {
     padding-top: 1%;
     color: #C68D7A;
-    font-weight: 1000;
+    font-weight: 500;
     font-family: 'Poppins', sans-serif;
     font-size: 100%;
 }
@@ -55,34 +55,70 @@
     align-items: center;
     gap: 10%;
     margin-top: 5%;
-    margin-left: 5%;
+    margin-left: 2%;
     margin-right: 10%;
 }
 
 .infocrud p {
-    margin-top: 5%;
+    margin-top: 20%;
     font-size: 120%;
-    line-height: 40px;
+    line-height: 10px;
     color: #A1A1A1;
     font-family: 'Oswald', sans-serif;
     font-size: 400;
 
 }
 
-.infocrud p+p {
-    line-height: 20px;
+.infocrud p:hover {
+    color: black;
 }
 
-
 .infocrud ul {
-    margin-top: 14%;
+    line-height: 50px;
+    margin-top: 30%;
     font-size: 120%;
-    line-height: 70px;
     gap: 40%;
     color: #A1A1A1;
     background-color: white;
 }
 
+.infocrud ul li:hover {
+    color: black;
+}
 
 
 
+.emailsubmit {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.formemail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    margin-top:10%;
+
+}
+
+.firstinput {
+    width: 15%;
+    color: black;
+}
+
+.emailsubmit button {
+    margin-top: 5%;
+    font-size: 110%;
+    padding: 0.5% 5%;
+    border: 1px solid black;
+    background-color: black;
+    color: #B0976D;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+}
+
+.emailsubmit button:hover {
+    background-color: #B0976D;
+    color: black;
+}

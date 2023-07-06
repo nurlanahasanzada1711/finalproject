@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Oswald:wght@300&family=Poppins:wght@200&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Oswald:wght@300;400&family=Poppins:wght@200;300&display=swap');
 
 * {
     margin: 0;
@@ -28,14 +29,14 @@
     font-size: 850%;
     color: white;
     font-family: 'Oswald', sans-serif;
-    font-weight: 1000;
+    font-weight: 400;
     /* line-height: 2px; */
     letter-spacing: 5px;
 }
 
 .blogwrite p {
     color: #A1A1A1;
-    font-weight: 1000;
+    font-weight: 600;
     /* line-height: 180px; */
     /* letter-spacing: 1px; */
     font-family: 'Poppins', sans-serif;
@@ -45,7 +46,7 @@
 .blogwrite p+p {
     padding-top: 1%;
     color: #C68D7A;
-    font-weight: 1000;
+    font-weight: 500;
     line-height: 30px;
     font-family: 'Poppins', sans-serif;
     font-size: 100%;

@@ -6,8 +6,24 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import GoogleIcon from '@mui/icons-material/Google';
 import n from '../../../images/n.png'
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import { Button, TextField, TextareaAutosize } from '@mui/material';
 
 const Contact = () => {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+  };
   const [contacts, setContacts] = useState([]);
   useEffect(() => {
     getAllContacts().then((res) => {
@@ -68,6 +84,44 @@ const Contact = () => {
             </div>
           </div>
         </section>
+        <section>
+          <div className={style.emailsubmit}>
+            <form className={style.formemail} ref={form} onSubmit={sendEmail}>
+              <TextField
+                name="name"
+                label="Name"
+                type="text"
+                className={style.firstinput}
+                variant='standard'
+              />
+
+              <TextField
+                name="user_email"
+                label="Email"
+                className={style.firstinput}
+                type="email"
+                variant='standard'
+              />
+              <TextField
+                name="user_subject"
+                label="Subject"
+                className={style.firstinput}
+                type="text"
+                variant='standard'
+              />
+              <TextField style={{fontSize:'120%'}}
+                name="message"
+                label="Message"
+                className={style.firstinput}
+                type="text"
+                variant='standard'
+              />
+            </form>
+            <Button>SEND</Button>
+          </div>
+        </section>
+
+
       </main>
     </>
   )

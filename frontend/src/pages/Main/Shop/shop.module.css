@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Oswald:wght@300&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Oswald:wght@300;400&family=Poppins:wght@200;600&display=swap');
 
 * {
     margin: 0;
@@ -27,7 +27,7 @@
     font-size: 850%;
     color: white;
     font-family: 'Oswald', sans-serif;
-    font-weight: 1000;
+    font-weight: 400;
     line-height: 30px;
     letter-spacing: 5px;
 }
