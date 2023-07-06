@@ -22,6 +22,7 @@ import AddProducts from "../pages/Admin/AddProducts/AddProducts";
 import Employees from "../pages/Admin/Employees/Employees";
 import EditEmployees from "../pages/Admin/EditEmployees/EditEmployees";
 import AddEmployees from "../pages/Admin/AddEmployees/AddEmployees";
+import BlogDetails from "../pages/Main/Blog/BlogDetails";
 
 export const ROUTES = [
 
@@ -47,6 +48,11 @@ export const ROUTES = [
                 path:'/blog',
                 element: <Blog/>
             },
+            {
+                path:'/blog/detail/:id',
+                element: <BlogDetails/>
+            },
+           
             {
                 path:'/contact',
                 element: <Contact/>

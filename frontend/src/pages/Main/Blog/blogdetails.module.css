@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Oswald:wght@300&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Oswald:wght@300;600;700&family=Poppins:wght@200;800&display=swap');
 
 * {
     margin: 0;
@@ -51,65 +51,85 @@
     font-size: 100%;
 }
 
-/* .down {
-    margin-top: 5%;
+.firstdetail {
+    padding-top: 5%;
+    margin-left: 10%;
+}
+
+.firstdetail h1 {
+    width: 55%;
+    line-height: 48px;
+    font-size: 300%;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
     margin-left: 5%;
-} */
+}
 
-
-
-.strowberry h2 {
+.firstdetail img {
+    width: 60%;
     margin-top: 3%;
-    width: 80%;
-    font-size: 140%;
-    line-height: 24px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
-    letter-spacing: 1px;
-
 }
 
-.strowberry p {
-    font-size: 80%;
-    font-weight: 500;
-    line-height: 50px;
+.firstdetail h5 {
+    width: 60%;
+    font-size: 120%;
     font-family: 'Oswald', sans-serif;
-    color: #A1A1A1;
-    ;
-}
-
-.strowberry p+p {
-    width: 86%;
-    font-size: 95%;
-    font-weight: 600;
-    color: black;
     line-height: 20px;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 1px;
-    color: #777;
+
 }
 
-
-
-.strowberry img {
-    width: 80%;
-    height: 40vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* .up {
-    margin-top: 5%;
-    margin-left: 5%;
-} */
-
-.blogcard {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-left: 5%;
-    margin-top: 5%;
-    margin-bottom: 20%;
+.firstdetail p {
+    font-size: 90%;
     width: 65%;
+    line-height: 25px;
+    margin-top: 2%;
+    color: #a1a1a1;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.picflex {
+    display: flex;
+    gap: 2%;
+    width: 100%;
+}
+
+.pic {
+    width: 60%;
+    margin-top: 2%;
+}
+
+.pic img {
+    width: 100%;
+}
+
+.info {
+    margin-top: 2%;
+}
+
+.firstdetail h3 {
+    display: inline-block;
+    margin-top: 5%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    margin-left: 5%;
+    font-size: 120%;
+}
+
+ul {
+    margin-top: 1%;
+    display: flex;
+    gap: 2%;
+
+}
+
+ul li {
+    list-style: none;
+
+}
+
+ul li:hover {
+    color: #C68D7A;
+
 }

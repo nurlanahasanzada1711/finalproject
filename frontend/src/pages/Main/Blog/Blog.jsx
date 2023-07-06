@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import style from '../Blog/blog.module.css'
-import freshly from '../../../images/freshly-baked.jpg'
+import { Link } from 'react-router-dom'
+import { getAllBlogs } from '../../../api/blogsrequests'
+
 const Blog = () => {
+  const [blogs, setBlogs] = useState([]);
+  useEffect(() => {
+    getAllBlogs().then((res) => {
+      setBlogs(res.data);
+      console.log(res.data);
+    });
+  }, []);
   return (
     <main>
       <section className={style.blog}>
@@ -16,15 +25,26 @@ const Blog = () => {
       </section>
 
       <section>
-        <div className={style.down}>
-          <div className={style.strowberry}>
-            <img src={freshly} alt='' />
-            <h2>MORBI FERMENTUM RISUS NON EROS TEMPUS CONGUE</h2>
-            <p>SEPTEMBER 8, 2020</p>
-            <p>Mauris tincidunt purus blandit arcu ullamcorper finibus.
-              Aliquam a iaculis est, eu vehicula elit. Vestibulum urna magna,
-              varius in</p>
-             
+        <div className='container'>
+          <div className={style.newsblog}>
+            <div className={style.blogs}>
+              <div className={style.blogcard}>
+                {blogs &&
+                  blogs.map((blog) => {
+                    return (
+                      <div className={style.strowberry}>
+                        <img src={blog.imageURL} alt='' />
+
+
+                        <Link to={`/blog/detail/${blog._id}`}><h2>{blog.desc}</h2></Link>
+                        <p>{blog.admin}</p>
+                        <p>{blog.about}</p>
+                      </div>
+                    )
+                  }
+                  )}
+              </div>
+            </div>
           </div>
         </div>
 

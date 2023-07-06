@@ -6,11 +6,7 @@ import style from '../AddServices/addservice.module.css'
 import * as yup from 'yup';
 
 const AddServices = () => {
-  const Validation = yup.object().shape({
-    about: yup.string().required('Please fill in the box'),
-    desc: yup.string().required('Please fill in the box'),
-    imageURL: yup.string().required('Please fill in the box'),
-  })
+
   const handleSubmit = async (values, actions) => {
     await postServices(values)
     console.log(values);
@@ -24,6 +20,12 @@ const AddServices = () => {
     actions.resetForm()
   }
 
+  const Validation = yup.object().shape({
+    about: yup.string().required('Please fill in the box'),
+    desc: yup.string().required('Please fill in the box'),
+    imageURL: yup.string().required('Please fill in the box'),
+  })
+
   const formik = useFormik({
     initialValues: {
       about: '',
@@ -33,7 +35,7 @@ const AddServices = () => {
     onSubmit: handleSubmit,
     validationSchema: Validation,
   })
- 
+
   return (
     <>
       <div className={style.addlogin}>
@@ -83,15 +85,15 @@ const AddServices = () => {
               <span style={{ color: "#7E5A4E", marginTop: "15px" }}>{formik.errors.imageURL}</span>
             ) : <span style={{ visibility: "hidden", marginTop: "15px" }}>error message</span>}
           </div>
-              
+
           <div className={style.addbutton}>
             <button
-            
+
               disabled={formik.isSubmitting || Object.keys(formik.errors).length > 0 ? true : false}
               type="submit"
               style={{ cursor: "pointer", marginTop: "20px" }}
               variant="contained"
-              
+
             >Add</button>
           </div>
         </form>

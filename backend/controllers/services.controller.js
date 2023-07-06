@@ -70,18 +70,17 @@ const servicesController = {
       about,
       imageURL
     } = req.body;
-    const existedService = await servicesModel.findByIdAndUpdate(id);
+    const existedService = await servicesModel.findByIdAndUpdate(id, {
+      about: about,
+      desc: desc,
+      imageURL: imageURL,
+    });
     if (existedService == undefined) {
-      res.status(404).send("Service not found!");
+      res.status(404).send("data not found!");
     } else {
-      res.status(200).send({
-        about: about,
-        desc: desc,
-        imageURL: imageURL,
-      });
+      res.status(200).send(`Data updated successfully!`);
     }
-  }
-
+  },
 };
 
 module.exports = servicesController
