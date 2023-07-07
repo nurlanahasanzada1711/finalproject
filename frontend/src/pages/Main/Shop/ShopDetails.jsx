@@ -11,7 +11,7 @@ import Select from '@mui/material/Select';
 import styled from '@emotion/styled'
 import InputBase from '@mui/material/InputBase';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';  
+import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const ShopDetails = () => {
@@ -121,13 +121,14 @@ const ShopDetails = () => {
                 <div className={style.share}>
                   <h4>SHARE THIS :</h4>
                   <ul>
-                    <li><FacebookIcon/></li>
-                    <li><TwitterIcon/></li>
-                    <li><LinkedInIcon/></li>
+                    <li><FacebookIcon /></li>
+                    <li><TwitterIcon /></li>
+                    <li><LinkedInIcon /></li>
                   </ul>
                 </div>
-
+                
               </div>
+              
               <div className={style.categories}>
                 <h2>CATEGORIES</h2>
                 <ul>
@@ -144,6 +145,17 @@ const ShopDetails = () => {
             </div>
           </div>
         </div>
+        <div className={style.descrip}>
+          <h2>Description</h2>
+          <p>Sed aliquet lectus nec nisi rutrum venenatis.
+            Nam non purus at erat posuere convallis. Integer in
+            efficitur risus, sit amet dapibus felis. Vivamus tristique,
+            nisi ac vulputate accumsan, ligula tellus faucibus justo,
+            et vehicula sem lorem non purus Quisque eleifend, nisl in
+            facilisis mollis, est purus sodales mi, ut elementum dui
+            enim sit amet nibh. Vestibulum at enim in nisl</p>
+        </div>
+
       </section>
     </>
   )
