@@ -9,6 +9,9 @@ import Typography from '@mui/material/Typography';
 import { getAllAbouts } from '../../../api/aboutrequests'
 import { getAllNumbers } from '../../../api/numbersrequests'
 import { getAllTeams } from '../../../api/teamrequests'
+import { getAllComments } from '../../../api/commentrequests'
+import { Slide } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
 
 
 
@@ -18,6 +21,8 @@ const About = () => {
   const [numbers, setNumbers] = useState([]);
   const [abouts, setAbouts] = useState([]);
   const [teams, setTeams] = useState([]);
+  const [comments, setComments] = useState([]);
+
 
 
   const handleChange = (panel) => (event, newExpanded) => {
@@ -41,6 +46,13 @@ const About = () => {
   useEffect(() => {
     getAllTeams().then((res) => {
       setTeams(res.data);
+      console.log(res.data);
+    });
+  }, []);
+
+  useEffect(() => {
+    getAllComments().then((res) => {
+      setComments(res.data);
       console.log(res.data);
     });
   }, []);
@@ -146,6 +158,36 @@ const About = () => {
 
           </div>
         </div>
+      </section>
+
+      <section>
+      {comments &&
+            comments.map((comment) => {
+              return (
+                <div>
+                  <Slide>
+                    <div className="eachslideeffect">
+                      
+                      <div className={style.firstslider}
+                        style={{
+                          backgroundImage: `url(${comments[0]})`,
+                          background: "cover",
+                          bottom: "0",
+                        }}
+                      >
+                        <span>
+                          <img src={comment.imageURL} alt='' />
+                          <p class="animate__animated animate__bounce">{comment.desc}</p>
+                          <p class="animate__animated animate__bounce">{comment.about}</p>
+                        </span>
+                      </div>
+                    </div>
+
+                  </Slide>
+                </div>
+              )
+            }
+            )}
       </section>
 
       <section className={style.accardions}>

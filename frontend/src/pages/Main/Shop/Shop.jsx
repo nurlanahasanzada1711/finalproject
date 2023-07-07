@@ -71,10 +71,22 @@ const Shop = () => {
                     <li>Donut</li>
                   </ul>
                 </div>
-
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className={style.descrip}>
+        <div>
+          <h2>Description</h2>
+          <p>Sed aliquet lectus nec nisi rutrum venenatis.
+            Nam non purus at erat posuere convallis. Integer in
+            efficitur risus, sit amet dapibus felis. Vivamus tristique,
+            nisi ac vulputate accumsan, ligula tellus faucibus justo,
+            et vehicula sem lorem non purus Quisque eleifend, nisl in
+            facilisis mollis, est purus sodales mi, ut elementum dui
+            enim sit amet nibh. Vestibulum at enim in nisl</p>
         </div>
       </section>
     </main>

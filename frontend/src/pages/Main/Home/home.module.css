@@ -723,6 +723,12 @@
     font-weight: 500;
 }
 
+.firstslider p+p {
+    color: #7E5A4E;
+    margin-top: 5%;
+    font-weight: 600;
+}
+
 .button-89 {
     --b: 3px;
     /* border thickness */

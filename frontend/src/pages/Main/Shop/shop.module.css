@@ -186,3 +186,30 @@
 .tags ul li:hover {
     color: black;
 }
+
+.descrip {
+    width: 70%;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.descrip h2 {
+    font-size: 150%;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2;
+
+
+}
+
+
+.descrip p {
+    margin-top: 2%;
+    font-size: 100%;
+    font-weight: 600;
+    line-height: 24px;
+    color: #A1A1A1;
+    font-family: 'Poppins', sans-serif;
+
+}

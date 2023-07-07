@@ -67,3 +67,9 @@
     line-height: 25px;
     letter-spacing: 3px;
 }
+
+.registerbtn button:hover {
+    color: #7E5A4E;
+    border: 2px solid  #7E5A4E;
+    background-color: white;
+}
