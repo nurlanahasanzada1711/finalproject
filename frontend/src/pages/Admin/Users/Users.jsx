@@ -25,6 +25,7 @@ const Users = () => {
     if (localStorage.getItem('token')) {
       getUsers(localStorage.getItem('token')).then((res) => {
         setUsers(res.users);
+        console.log(res.users)
       });
     }
   }, [])

@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Oswald:wght@300;600;700&family=Poppins:wght@200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.about {
+    background-image: url("../../../images/img-banner.jpg");
+    width: 100%;
+    height: 80vh;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.aboutwrite {
+    padding-top: 13%;
+    padding-left: 13%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.63);
+    width: 100%;
+    height: 80vh;
+}
+
+.about h1 {
+    font-size: 800%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+
+}
+
+.about span {
+    font-size: 90%;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: #A1A1A1;
+    ;
+}
+
+.about p {
+    font-weight: 500;
+    font-style: italic;
+    font-family: 'Poppins', sans-serif;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    padding-top: 3%;
+    color: #C68D7A;
+}
+
+.besthistory {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.besthistory h2 {
+    font-size: 210%;
+    color: #7E5A4E;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    line-height: 30px;
+    letter-spacing: 2px;
+}
+
+.besthistory h6 {
+    font-size: 210%;
+    margin-top: 1%;
+    color: #000000;
+
+    font-family: 'Italianno', cursive;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 100%;
+    letter-spacing: 30%;
+}
+
+.serviceflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+}
+
+.left {
+    width: 20%;
+    padding-top: 5%;
+}
+
+.left h5 {
+    font-size: 150%;
+    color: #7E5A4E;
+    font-family: 'Oswald', sans-serif;
+}
+
+.left h3 {
+    font-size: 120%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+}
+
+.left p {
+    color: #A1A1A1;
+    font-family: 'Poppins', sans-serif;
+    font-size: 90%;
+    margin-top: 3%;
+    font-weight: 500;
+}
+
+.right {
+    width: 20%;
+}
+
+.right h5 {
+    font-size: 150%;
+    color: #7E5A4E;
+    font-family: 'Oswald', sans-serif;
+}
+
+.right h3 {
+    font-size: 120%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+}
+
+.right p {
+    color: #A1A1A1;
+    font-family: 'Poppins', sans-serif;
+    font-size: 90%;
+    margin-top: 3%;
+    font-weight: 500;
+}
+
+.accardionflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.accardionservice {
+    width: 50%;
+    height: 100vh;
+    background-color: #F0F5F6;
+    padding-left: 5%;
+    padding-top: 10%;
+    padding-right: 5%;
+}
+
+.accardionwrites {
+    background-color: rgb(0, 0, 0);
+    width: 50%;
+    height: 100vh;
+    background-image: url('../../../images/bread-bakery.jpg');
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 10%;
+    padding-right: 5%;
+    padding-left: 10%;
+}
+
+
+.accardionwrites h2 {
+    font-size: 210%;
+    color: #7E5A4E;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    line-height: 30px;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.accardionwrites h6 {
+    font-size: 210%;
+    margin-top: 4%;
+    color: #000000;
+    font-family: 'Italianno', cursive;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 100%;
+    letter-spacing: 30%;
+    color: white;
+
+}
+
+.accardionwrites p {
+    color: #A1A1A1;
+    font-family: 'Poppins', sans-serif;
+    font-size: 100%;
+    margin-top: 5%;
+    font-weight: 500;
+}

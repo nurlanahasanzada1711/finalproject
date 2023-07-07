@@ -4,6 +4,7 @@ import { useFormik } from "formik";
 import { signIn } from "../../../api/loginrequests";
 import Swal from "sweetalert2";
 import { useUserContext } from "../../../context/UserContext";
+import style from '../AdminLogin/login.module.css'
 
 const Login = () => {
   const [user, setUser] = useUserContext();
@@ -27,11 +28,11 @@ const Login = () => {
       });
       actions.resetForm();
       if (values.email == 'nurlana@code.edu.az') {
-        navigate('/admin')
+        navigate('/admin/home')
       }
-      else{
-        navigate('/admin/users')
-      }
+      // else{
+      //   navigate('/admin/users')
+      // }
     }
   };
   const formik = useFormik({
@@ -51,9 +52,10 @@ const Login = () => {
         alignItems: "center",
       }}
     >
-      <form onSubmit={formik.handleSubmit}>
+      <form className={style.submitbtn} onSubmit={formik.handleSubmit}>
         <div>
           <TextField
+          className={style.submitbtn}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             name="email"

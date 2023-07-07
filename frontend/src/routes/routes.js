@@ -24,6 +24,7 @@ import AddEmployees from "../pages/Admin/AddEmployees/AddEmployees";
 import BlogDetails from "../pages/Main/Blog/BlogDetails";
 import Users from "../pages/Admin/Users/Users";
 import ShopDetails from "../pages/Main/Shop/ShopDetails";
+import ServicePage from "../pages/Main/Service/ServicePage";
 
 export const ROUTES = [
 
@@ -44,6 +45,10 @@ export const ROUTES = [
             {
                 path:'/shop',
                 element: <Shop/>
+            },
+            {
+                path:'/service',
+                element: <ServicePage/>
             },
             {
                 path:'/shop/detail/:id',
@@ -86,10 +91,10 @@ export const ROUTES = [
                 path:'',
                 element:<AdminLogin/>
             },
-            // {
-            //     path:'login',
-            //     element: <AdminLogin/>
-            // },
+            {
+                path:'home',
+                element: <AdminHome/>
+            },
             {
                 path:'services',
                 element: <Services/>

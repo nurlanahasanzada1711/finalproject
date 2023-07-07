@@ -6,20 +6,21 @@ import { signUp } from '../../../api/loginrequests';
 import Swal from 'sweetalert2';
 import style from '../RegisterPage/register.module.css'
 
-export default function NewAcc() {
+export default function  NewAcc() {
     const navigate = useNavigate();
-    const handleSubmit = async (values, actions) => {
-        await signUp({
+    const handleSubmit = (values, actions) => {
+        signUp({
             name: values.name,
             username: values.username,
             email: values.email,
+            age: values.age,
             password: values.password,
             isAdmin: false
         });
         Swal.fire({
             position: 'top-end',
             icon: 'success',
-            title: 'Uğurla qeydiyyatdan keçildi!',
+            title: 'Successfully registered!',
             showConfirmButton: false,
             timer: 1200
         })
@@ -32,6 +33,7 @@ export default function NewAcc() {
             name: '',
             username: '',
             email: '',
+            age:'',
             password: '',
             confirmPassword: ''
         },

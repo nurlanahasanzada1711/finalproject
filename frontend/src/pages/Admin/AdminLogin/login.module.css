@@ -17,13 +17,22 @@
 .submitbtn {
     display: block;
     margin-top: 10%;
-    margin: 20px auto;
+    margin: 40px auto;
     color: white;
-    background-color: #5c4037;
-   
-    
+
 }
 
-.submitbtn:hover {
-    background-color:#C68D7A;;
+.submitbtn button {
+    margin-top: 8%;
+    font-size: 90%;
+    padding: 5% 15%;
+    border: none;
+    background-color: #7E5A4E;
+    color: white;
+}
+
+.submitbtn button:hover {
+    color: #7E5A4E;
+    border: 1px solid #7E5A4E;
+    background-color: white;
 }

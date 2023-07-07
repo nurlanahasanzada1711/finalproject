@@ -38,7 +38,8 @@ export default function LoginM() {
                 timer: 1200,
             });
             actions.resetForm();
-            navigate("/admin/users");
+            console.log("slaam");
+            navigate("/");
         }
     };
     const formik = useFormik({

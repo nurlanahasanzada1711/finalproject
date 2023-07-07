@@ -99,13 +99,14 @@ const Users = mongoose.model('Users', new mongoose.Schema({
     name: String,
     username: String,
     email: String,
+    age:Number,
     password: String,
     isAdmin: Boolean
 }));
 
 //register
 app.post('/api/register', async (req, res) => {
-    const { name, username, email, password } = req.body;
+    const { name, username, email, password, age} = req.body;
 
     const existedUsername = await Users.findOne({ username: username });
     const existedMail = await Users.findOne({ email: email });
@@ -123,6 +124,7 @@ app.post('/api/register', async (req, res) => {
         name: name,
         username: username,
         email: email,
+        age:age,
         password: hashedPassword,
         isAdmin: false
     })
@@ -158,6 +160,7 @@ app.post('/api/login', async (req, res) => {
                     name: existedEmail.name,
                     username: existedEmail.username,
                     email: existedEmail.email,
+                    age: existedEmail.age,
                     isAdmin: existedEmail.isAdmin
                 }, message: 'signed in successfully!'
             });
