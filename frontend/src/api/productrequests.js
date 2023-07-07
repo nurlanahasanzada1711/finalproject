@@ -11,6 +11,14 @@ export const getAllProducts = async()=>{
     return globalData
 }
 
+export const getProductsById = async (id) => {
+    let globalData
+    await axios.get(`${BASE_URL}/products/${id}`).then((res) => {
+        globalData = res.data
+    })
+    return globalData
+}
+
 export const postProducts = (payload)=>{
     axios.post(`${BASE_URL}/products`,payload);
 }
@@ -21,4 +29,9 @@ export const deleteProducts = async (id) => {
         deletedData = res.data
     })
     return deletedData
+}
+
+
+export const editProducts = async (id, newProducts) => {
+    await axios.put(`${BASE_URL}/products/${id}`, newProducts)
 }

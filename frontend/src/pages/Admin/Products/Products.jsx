@@ -65,7 +65,7 @@ const Products = () => {
                                             >
                                                 Delete
                                             </Button>
-                                            <Link to='/admin/editproducts'><Button style={{ padding: '4% 8%' }}>Edit</Button></Link>
+                                            <Link to={`/admin/products/edit/${product._id}`}><Button style={{ padding: '4% 8%' }}>Edit</Button></Link>
 
                                         </div>
                                     )

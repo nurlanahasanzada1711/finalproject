@@ -86,6 +86,11 @@
     margin-left: 5%;
 }
 
+.team button:hover {
+    border: 1px solid #7E5A4E;
+    color: #7E5A4E;
+    background-color: white;
+}
 
 .teamwrites button {
     margin-top: 2%;

@@ -11,6 +11,14 @@ export const getAllTeams = async()=>{
     return globalData
 }
 
+export const getTeamsById = async (id) => {
+    let globalData
+    await axios.get(`${BASE_URL}/teams/${id}`).then((res) => {
+        globalData = res.data
+    })
+    return globalData
+}
+
 export const postTeams = (payload)=>{
     axios.post(`${BASE_URL}/teams`,payload);
 }
@@ -21,4 +29,8 @@ export const deleteTeams = async (id) => {
         deletedData = res.data
     })
     return deletedData
+}
+
+export const editTeams = async (id, newProducts) => {
+    await axios.put(`${BASE_URL}/teams/${id}`, newProducts)
 }

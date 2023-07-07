@@ -7,8 +7,8 @@ import * as yup from 'yup';
 
 const AddProducts = () => {
 
-  const Validation = yup.object().shape({
-    price: yup.number().required('Please fill in the box'),
+  const ProductsValidation = yup.object().shape({
+    price: yup.string().required('Please fill in the box'),
     desc: yup.string().required('Please fill in the box'),
     imageURL: yup.string().required('Please fill in the box'),
   })
@@ -18,7 +18,7 @@ const AddProducts = () => {
     Swal.fire({
       position: 'top-end',
       icon: 'success',
-      title: `${values.service} posted successfully!`,
+      title: `Product posted successfully!`,
       showConfirmButton: false,
       timer: 1500
     })
@@ -32,7 +32,7 @@ const AddProducts = () => {
       imageURL: '',
     },
     onSubmit: handleSubmit,
-    validationSchema: Validation,
+    validationSchema: ProductsValidation,
   })
   return (
     <>
@@ -71,7 +71,7 @@ const AddProducts = () => {
             <input
               style={{ padding: "15px" }}
               placeholder='Price'
-              type="number"
+              type="text"
               name="price"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}

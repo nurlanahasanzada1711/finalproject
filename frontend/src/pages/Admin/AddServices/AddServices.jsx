@@ -13,7 +13,7 @@ const AddServices = () => {
     Swal.fire({
       position: 'top-end',
       icon: 'success',
-      title: `${values.service} posted successfully!`,
+      title: `Service posted successfully!`,
       showConfirmButton: false,
       timer: 1500
     })

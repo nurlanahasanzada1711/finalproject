@@ -18,7 +18,7 @@ const AddEmployees = () => {
     Swal.fire({
       position: 'top-end',
       icon: 'success',
-      title: `${values.service} posted successfully!`,
+      title: `Employee osted successfully!`,
       showConfirmButton: false,
       timer: 1500
     })

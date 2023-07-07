@@ -50,7 +50,7 @@ const Employees = () => {
                                                     if (result.isConfirmed) {
                                                         deleteTeams(team._id).then((res) => {
                                                             Swal.fire(
-                                                                `${res.name} Deleted!`,
+                                                                `Product deleted!`,
                                                                 "Your employee has been deleted.",
                                                                 "success"
                                                             );
@@ -66,7 +66,7 @@ const Employees = () => {
                                         >
                                             Delete
                                         </Button>
-                                        <Link to='/admin/editemployees'><Button style={{ padding: '3% 8%' }}>Edit</Button></Link>
+                                        <Link to={`/admin/employees/edit/${team._id}`}><Button style={{ padding: '3% 8%' }}>Edit</Button></Link>
                                     </div>
                                 )
                             }

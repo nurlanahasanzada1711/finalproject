@@ -21,13 +21,27 @@ const productsContoller = {
         }
     },
 
+    getProductsById: async (req, res) => {
+        const id = req.params.id;
+        const product = await productsModel.findById(id);
+        console.log("product found", product);
+        if (!product) {
+            res.status(200).send("Data not found!")
+        } else {
+            res.status(200).send({
+                data: product,
+                message: "Data get success!",
+            });
+        }
+    },
+
     postProducts: async (req, res) => {
         const {
             price,
             desc,
             imageURL,
         } = req.body;
-        const newProducts= new productsModel({
+        const newProducts = new productsModel({
             price: price,
             imageURL: imageURL,
             desc: desc,
@@ -46,6 +60,25 @@ const productsContoller = {
                 data: product,
                 message: "product deleted successfully!",
             });
+        }
+    },
+
+    editProducts: async (req, res) => {
+        const id = req.params.id;
+        const {
+            price,
+            desc,
+            imageURL,
+        } = req.body;
+        const existedProduct = await productsModel.findByIdAndUpdate(id, {
+            price: price,
+            desc: desc,
+            imageURL: imageURL,
+        });
+        if (existedProduct == undefined) {
+            res.status(404).send("data not found!");
+        } else {
+            res.status(200).send(`Data updated successfully!`);
         }
     },
 

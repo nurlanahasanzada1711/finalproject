@@ -21,6 +21,21 @@ const teamController = {
         }
     },
 
+    
+    getTeamsById: async (req, res) => {
+        const id = req.params.id;
+        const team = await teamModel.findById(id);
+        console.log("team found", team);
+        if (!team) {
+            res.status(200).send("Data not found!")
+        } else {
+            res.status(200).send({
+                data: team,
+                message: "Data get success!",
+            });
+        }
+    },
+
     postTeams: async (req, res) => {
         const {
             chef,
@@ -46,6 +61,25 @@ const teamController = {
                 data: team,
                 message: "team deleted successfully!",
             });
+        }
+    },
+
+    editTeams: async (req, res) => {
+        const id = req.params.id;
+        const {
+            chef,
+            desc,
+            imageURL
+        } = req.body;
+        const existedTeam = await teamModel.findByIdAndUpdate(id, {
+            chef: chef,
+            desc: desc,
+            imageURL: imageURL,
+        });
+        if (existedTeam == undefined) {
+            res.status(404).send("data not found!");
+        } else {
+            res.status(200).send(`Data updated successfully!`);
         }
     },
 

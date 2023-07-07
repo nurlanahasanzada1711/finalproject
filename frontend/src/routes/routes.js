@@ -84,12 +84,12 @@ export const ROUTES = [
         children: [
             {
                 path:'',
-                element:<AdminHome/>
+                element:<AdminLogin/>
             },
-            {
-                path:'login',
-                element: <AdminLogin/>
-            },
+            // {
+            //     path:'login',
+            //     element: <AdminLogin/>
+            // },
             {
                 path:'services',
                 element: <Services/>
@@ -119,12 +119,12 @@ export const ROUTES = [
                 element: <Employees/>
             },
             {
-                path:'editemployees',
-                element: <EditEmployees/>
+                path:'addemployees',
+                element: <AddEmployees/>
             },
             {
                 path:'employees/edit/:id',
-                element: <AddEmployees/>
+                element: <EditEmployees/>
             },
             {
                 path:'users',  
