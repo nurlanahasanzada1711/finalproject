@@ -646,17 +646,16 @@
     font-size: 210%;
     color: white;
     font-family: 'Oswald', sans-serif;
-    font-weight: 1000;
+    font-weight: 700;
     line-height: 30px;
     letter-spacing: 2px;
 }
 
 .contactus p {
     margin-top: 5%;
-    font-weight: 900;
+    font-weight: 400;
     font-size: 100%;
     color: #A1A1A1;
-    ;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -675,27 +674,28 @@
     align-items: center;
     gap: 10%;
     text-align: center;
+    margin-top: 10%;
 }
 
 .pastry h1 {
     font-size: 350%;
     color: #7E5A4E;
     font-family: 'Oswald', sans-serif;
-    font-weight: 1000;
+    font-weight: 800;
 }
 
 .pastry p {
     font-size: 100%;
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
 }
 
-.videomodal {
+/* .videomodal {
     width: 80%;
     margin: 0 auto;
     height: 100vh;
     margin-top: 5%;
-}
+} */
 
 .firstslider {
     width: 50%;

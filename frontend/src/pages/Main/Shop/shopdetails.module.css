@@ -40,4 +40,147 @@
     letter-spacing: 1px;
     font-family: 'Poppins', sans-serif;
 }
-  
+
+.detailsrow {
+    margin-left: 5%;
+}
+
+.detailsflex {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-left: 5%;
+    margin-right: 20%;
+    margin-top: 5%;
+}
+
+.shoppic {
+    width: 120%;
+}
+
+.shoppic img {
+    width: 90%;
+    height: 74vh;
+    border: 1px solid #A1A1A1;
+}
+
+.shopinc {
+    width: 80%;
+    margin-right: 5%;
+}
+
+.shopinc h1 {
+    font-size: 200%;
+    line-height: 36px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.shopinc p {
+    font-size: 130%;
+    margin-top: 5%;
+    color: #7E5A4E;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    letter-spacing: 5.4px;
+}
+
+.shopinc p+p {
+    color: #A1A1A1;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    font-size: 90%;
+    font-weight: 500;
+    line-height: 25px;
+
+}
+
+.categories {
+    width: 20%;
+}
+
+.categories h2 {
+    text-align: start;
+    font-size: 120%;
+    line-height: 22px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+}
+
+.categories ul {
+    display: block;
+    text-align: start;
+    margin-top: 30%;
+}
+
+.categories ul li {
+    margin-top: 5%;
+    font-size: 90%;
+    color: #555555;
+    transition: color 0.3s;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.categories ul li:hover {
+    color: black;
+}
+
+.categories img {
+    margin-top: 30%;
+    width: 250%;
+    height: 70%;
+    display: block;
+}
+
+.color {
+
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.size {
+    margin-bottom: 5%;
+}
+
+
+.shopinc button {
+    font-size: 90%;
+    margin-top: 7%;
+    padding: 4% 15%;
+    background-color: black;
+    border: 1px solid #7E5A4E;
+    border: none;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+}
+
+.shopinc button:hover {
+    background-color: #7E5A4E;
+}
+
+.share {
+    margin-top: 10%;
+    margin-left: 15%;
+}
+
+.share h4 {
+    font-size: 120%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.share ul {
+    margin-left: 5%;
+    display: flex;
+    gap: 10%;
+    margin-top: 2%;
+    color: #CCCCCC;
+}
+
+.share ul li:hover {
+    color: black;
+}

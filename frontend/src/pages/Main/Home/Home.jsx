@@ -381,7 +381,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section>
+        {/* <section>
           <div className={style.videomodal}>
             <video
               ref={videoRef}
@@ -396,7 +396,7 @@ const Home = () => {
               <button className="btn-primary" onClick={() => setOpen(true)}>VIEW DEMO</button>
             </video>
           </div>
-        </section>
+        </section> */}
         <section className='numbers'>
           <div className='container'>
             <div className={style.numbers}>

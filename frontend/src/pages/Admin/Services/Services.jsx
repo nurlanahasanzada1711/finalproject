@@ -26,7 +26,7 @@ const Services = () => {
           <img src={icon} alt='' />
           <h2>FRESH SERVICES</h2>
           <h6>The Best Of Our Services</h6>
-          <Link to='/admin/services'><Button>Add Services</Button></Link>
+          <Link to='/admin/addproducts'><Button>Add Services</Button></Link>
         </section>
 
 
