@@ -49,7 +49,7 @@ const Products = () => {
                                                         if (result.isConfirmed) {
                                                             deleteProducts(product._id).then((res) => {
                                                                 Swal.fire(
-                                                                    `${res.name} Deleted!`,
+                                                                    ` Deleted!`,
                                                                     "Your product has been deleted.",
                                                                     "success"
                                                                 );

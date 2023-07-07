@@ -15,6 +15,14 @@
     background-size: cover;
 }
 
+.desc {
+    font-size: 120%;
+    margin-top: 8%;
+    margin-left: 10%;
+    color: #A1A1A1;
+    font-family: 'Poppins', sans-serif;
+}
+
 .shopwrite {
     padding-top: 18%;
     padding-left: 12%;
@@ -46,7 +54,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5%;
+    margin-top: 2%;
     flex-wrap: wrap;
 }
 
@@ -62,7 +70,7 @@
     width: 90%;
     border-radius: 50%;
     border: 2px solid #7E5A4E;
-    height: 30vh;
+    height: 35vh;
 }
 
 .productcards h3 {
@@ -102,17 +110,19 @@
 .shopflex {
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
     text-align: center;
     gap: 2%;
 }
 
 .categories {
+    width: 10%;
     margin-right: 14%;
     margin-top: 5%;
 }
 
 .categories h2 {
+    text-align: start;
     font-size: 120%;
     line-height: 22px;
     font-family: 'Oswald', sans-serif;
@@ -132,9 +142,47 @@
     transition: color 0.3s;
     font-family: 'Poppins', sans-serif;
     font-style: italic;
-   font-weight: 600;
+    font-weight: 600;
 }
 
 .categories ul li:hover {
+    color: black;
+}
+
+.categories img {
+    margin-top: 30%;
+    width: 250%;
+    height: 70%;
+    display: block;
+}
+
+.tags {
+    width: 120%;
+    margin-right: 14%;
+    margin-top: 70%
+}
+
+.tags h2 {
+    font-size: 120%;
+    line-height: 22px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    text-align: start;
+}
+
+.tags ul {
+    text-align: start;
+}
+
+.tags ul li {
+    font-size: 90%;
+    color: #555555;
+    transition: color 0.3s;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.tags ul li:hover {
     color: black;
 }
