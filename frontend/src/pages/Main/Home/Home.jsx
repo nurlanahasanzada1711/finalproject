@@ -8,8 +8,6 @@ import chocolate from '../../../images/chocolate.jpg'
 import fruit from '../../../images/fruit.jpg'
 import bakery from '../../../images/bakery.jpg'
 import { useState } from 'react'
-import ReactDOM from 'react-dom'
-import ModalVideo from 'react-modal-video'
 import logo from '../../../images/Logo-1.png'
 import { getAllNumbers } from '../../../api/numbersrequests'
 import { getAllHistories } from '../../../api/historyrequests'
@@ -26,7 +24,6 @@ import { Link } from 'react-router-dom'
 
 
 const Home = () => {
-  const [isOpen, setOpen] = useState(false)
   const [numbers, setNumbers] = useState([]);
   const [histories, setHistories] = useState([]);
   const [services, setServices] = useState([]);
@@ -39,14 +36,6 @@ const Home = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
 
-  const togglePlay = () => {
-    if (isPlaying) {
-      videoRef.current.pause();
-    } else {
-      videoRef.current.play();
-    }
-    setIsPlaying(!isPlaying);
-  };
 
   useEffect(() => {
     getAllNumbers().then((res) => {
@@ -319,7 +308,7 @@ const Home = () => {
                 <h2>BOOK A TABLE</h2>
                 <h6>Submit Information To Place Order</h6>
                 <form className={style.inputs}>
-                  <TextField fullWidth style={{ display: "block", width: "465px", marginTop: "20px", color: "FFF" }}
+                  <TextField fullWidth style={{ display: "block", width: "465px", marginTop: "20px", color: "#FFFFFF54" }}
                     id="outlined-basic"
                     name="your name"
                     label="Your name"
@@ -343,14 +332,14 @@ const Home = () => {
                   <TextField fullWidth style={{ display: "block", width: "465px", marginTop: "20px" }}
                     id="outlined-basic"
                     name="date"
-                    label="Date"
+                    // label="Date"
                     type="date"
                     variant='standard'
                   />
                   <TextField fullWidth style={{ display: "block", width: "465px", marginTop: "20px" }}
                     id="outlined-basic"
                     name="time"
-                    label="Time"
+                    // label="Time"
                     type="time"
                     variant='standard'
                   />
@@ -369,9 +358,9 @@ const Home = () => {
                 <h2>CONTACT US</h2>
                 <p><b>PO Box 16122 Collins Victoria 3000 Australia</b></p>
                 <h6>GALLERY</h6>
-                <p></p>
-                <p></p>
-                <p></p>
+                <p>Email: info@chiart.abcdf.com</p>
+                <p>Phone: + 33 323 34522</p>
+                <p>Fax: +33 3467888</p>
                 <div className={style.images}>
                   <img src={chocolate} alt='' />
                   <img src={fruit} alt='' />
@@ -381,22 +370,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        {/* <section>
-          <div className={style.videomodal}>
-            <video
-              ref={videoRef}
-              // width="80%"
-              // height="80%"
-              poster="https://bake.arrowtheme.com/wp-content/uploads/elementor/thumbs/bg-video-ovat3a9oe3xtudhpm5vi8u4ysxfcqlkxihlrmlj40w.png"
-              controls
-            >
-              <source src="https://www.youtube.com/watch?v=ad5_MXzibSM" type="video/mp4" />
-              <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="L61p2uyiMSo" onClose={() => setOpen(false)} />
 
-              <button className="btn-primary" onClick={() => setOpen(true)}>VIEW DEMO</button>
-            </video>
-          </div>
-        </section> */}
         <section className='numbers'>
           <div className='container'>
             <div className={style.numbers}>
