@@ -13,6 +13,7 @@ const team_router = require('./routes/team.routes');
 const menu_router = require('./routes/menu.routes');
 const product_router = require('./routes/product.routes');
 const contact_router = require('./routes/contact.routes');
+const comment_router = require('./routes/comment.routes');
 const mongoose = require('mongoose');
 
 dotenv.config();
@@ -59,6 +60,10 @@ app.use('/api/products/', product_router)
 
 // CONTACTS
 app.use('/api/contacts/', contact_router)
+
+// COMMENTS
+app.use('/api/comments/', comment_router)
+
 
 
 

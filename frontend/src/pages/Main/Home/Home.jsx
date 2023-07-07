@@ -18,6 +18,9 @@ import { getAllTimes } from '../../../api/timesrequests'
 import { getAllBlogs } from '../../../api/blogsrequests'
 import { getAllMenus } from '../../../api/menurequests'
 import { getAllProducts } from '../../../api/productrequests'
+import { getAllComments } from '../../../api/commentrequests'
+import { Slide } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
 
 
 
@@ -30,6 +33,7 @@ const Home = () => {
   const [blogs, setBlogs] = useState([]);
   const [menus, setMenus] = useState([]);
   const [products, setProducts] = useState([]);
+  const [comments, setComments] = useState([]);
 
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
@@ -88,6 +92,13 @@ const Home = () => {
   useEffect(() => {
     getAllProducts().then((res) => {
       setProducts(res.data);
+      console.log(res.data);
+    });
+  }, []);
+
+  useEffect(() => {
+    getAllComments().then((res) => {
+      setComments(res.data);
       console.log(res.data);
     });
   }, []);
@@ -159,6 +170,34 @@ const Home = () => {
         <section className={style.testimonals}>
           <h2>TESTIMONALS</h2>
           <h6>What Clients Say About Us</h6>
+
+          {comments &&
+            comments.map((comment) => {
+              return (
+                <div>
+                  <Slide>
+                    <div className="eachslideeffect">
+                      <div className={style.firstslider}
+                        style={{
+                          backgroundImage: `url(${comments[0]})`,
+                          background: "cover",
+                          bottom: "0",
+                        }}
+                      >
+                        <span>
+                          <img src={comment.imageURL} alt='' />
+                          <p class="animate__animated animate__bounce">{comment.desc}</p>
+                          <p class="animate__animated animate__bounce">{comment.about}</p>
+                        </span>
+                      </div>
+                    </div>
+
+                  </Slide>
+                </div>
+              )
+            }
+            )}
+         
         </section>
 
         <section className={style.menubackground}>
