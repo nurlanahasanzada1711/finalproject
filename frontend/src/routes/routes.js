@@ -12,7 +12,6 @@ import AdminHome from "../pages/Admin/AdminHome/AdminHome";
 import AdminRoot from "../pages/Admin/AdminRoot";
 import RegisterPage from "../pages/Main/RegisterPage/RegisterPage";
 import LoginPage from "../pages/Main/LoginPage/LoginPage";
-import Users from "../pages/Main/Users/Users";
 import Services from "../pages/Admin/Services/Services";
 import AddServices from "../pages/Admin/AddServices/AddServices";
 import EditServices from "../pages/Admin/EditServices/EditServices";
@@ -23,6 +22,8 @@ import Employees from "../pages/Admin/Employees/Employees";
 import EditEmployees from "../pages/Admin/EditEmployees/EditEmployees";
 import AddEmployees from "../pages/Admin/AddEmployees/AddEmployees";
 import BlogDetails from "../pages/Main/Blog/BlogDetails";
+import Users from "../pages/Admin/Users/Users";
+import ShopDetails from "../pages/Main/Shop/ShopDetails";
 
 export const ROUTES = [
 
@@ -45,6 +46,10 @@ export const ROUTES = [
                 element: <Shop/>
             },
             {
+                path:'/shop/detail/:id',
+                element: <ShopDetails/>
+            },
+            {
                 path:'/blog',
                 element: <Blog/>
             },
@@ -64,10 +69,6 @@ export const ROUTES = [
             {
                 path:'/login',
                 element: <LoginPage/>
-            },
-            {
-                path:'/users',  
-                element: <Users/>
             },
             {
                 path:'*',
@@ -124,6 +125,10 @@ export const ROUTES = [
             {
                 path:'employees/edit/:id',
                 element: <AddEmployees/>
+            },
+            {
+                path:'users',  
+                element: <Users/>
             },
         ]
     }

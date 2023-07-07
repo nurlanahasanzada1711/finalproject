@@ -21,6 +21,7 @@ import { getAllProducts } from '../../../api/productrequests'
 import { getAllComments } from '../../../api/commentrequests'
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
+import { Link } from 'react-router-dom'
 
 
 
@@ -245,7 +246,7 @@ const Home = () => {
                         <img src={product.imageURL} alt='' />
                         <h3>{product.desc}</h3>
                         <h5>{product.price}</h5>
-                        <button>SELECT OPTIONS</button>
+                        <Link to={`/shop/detail/${product._id}`}><button>SELECT OPTION</button></Link>
                       </div>
                     )
                   }

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import { getUsers } from "../../../api/loginrequests"
 import { useNavigate } from "react-router-dom";
 
+
 const Users = () => {
 
     const navigate = useNavigate();
@@ -22,7 +23,7 @@ const Users = () => {
     return (
         <ul>
         {users && users.map((user)=>{
-          return <li key={user._id}>{user.username}</li>
+          return <li key={user._id}>{user.username}{user.name}</li>
         })}
       </ul>
     )

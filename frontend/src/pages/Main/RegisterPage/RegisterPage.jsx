@@ -79,6 +79,19 @@ export default function NewAcc() {
                             />
                         </div>
 
+                        <div className={style.nameinput}>
+                            <TextField
+                                name="age"
+                                label="Age"
+                                className={style.forminput}
+                                type="number"
+                                onBlur={formik.handleBlur}
+                                value={formik.values.age}
+                                onChange={formik.handleChange}
+                                variant='standard'
+
+                            />
+                        </div>
                         <div className='input-div'>
                             <TextField
                                 name="email"
